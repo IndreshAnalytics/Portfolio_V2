@@ -1,0 +1,103 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office'
+xmlns:w='urn:schemas-microsoft-com:office:word'
+xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>Indresh Tiwari - Data Analyst Resume</title>
+<style>
+/* Clean styles for Word import */
+body { font-family: 'Calibri', Arial, sans-serif; font-size: 11pt; }
+h1 { font-size: 18pt; color: #0a192f; margin-bottom: 2pt; }
+h2 { font-size: 12pt; color: #0056b3; margin-bottom: 10pt; font-weight: bold; }
+h3 { font-size: 11pt; color: #0a192f; border-bottom: 1px solid #ddd; margin-top: 15pt; margin-bottom: 5pt; text-transform: uppercase; font-weight: bold; }
+p { margin: 0 0 5pt 0; }
+a { color: #0056b3; text-decoration: none; }
+ul { margin: 0 0 0 20pt; padding: 0; }
+li { margin-bottom: 3pt; }
+table { width: 100%; border-collapse: collapse; }
+td { vertical-align: top; padding-bottom: 3pt; }
+.label { font-weight: bold; width: 150px; color: #0a192f; }
+.header-table td { border: none; }
+</style>
+</head>
+<body>
+
+<!-- Header Table for alignment -->
+<table class="header-table">
+<tr>
+    <td>
+        <h1>INDRESH TIWARI</h1>
+        <h2>SENIOR ANALYTICS ENGINEER | POWER BI DEVELOPER</h2>
+    </td>
+    <td align="right" style="text-align: right; font-size: 10pt; color: #555;">
+        Pune, India | +91-9926001335<br/>
+        indreshtiwa@gmail.com<br/>
+        linkedin.com/in/indreshtiwari<br/>
+        github.com/IndreshAnalytics
+    </td>
+</tr>
+</table>
+
+<h3>PROFESSIONAL SUMMARY</h3>
+<p>Results-driven Senior Analytics Engineer with 4.5+ years of experience engineering end-to-end analytics solutions across Banking and Healthcare. Proven track record of reducing reporting time by 40% and optimizing data architecture. Expert in Power BI, SQL, Alteryx, and emerging GenAI tools (ChatGPT, Gemini, Copilot).</p>
+
+<h3>TECHNICAL SKILLS</h3>
+<table>
+<tr><td class="label">Business Intelligence:</td><td>Power BI (Desktop & Service), Tableau, DAX, Power Query, Advanced Excel</td></tr>
+<tr><td class="label">Data Engineering:</td><td>Python, SQL Server, Alteryx, Data Modeling</td></tr>
+<tr><td class="label">Cloud & Design:</td><td>Google Cloud Platform, BigQuery, Jira, GitHub, Figma</td></tr>
+<tr><td class="label">AI & Automation:</td><td>ChatGPT, Gemini, Copilot, Prompt Engineering</td></tr>
+</table>
+
+<h3>WORK EXPERIENCE</h3>
+
+<p><strong>Quauto Technologies</strong> | Senior Analytics Engineer | <em>Aug 2023 – Present</em></p>
+<ul>
+<li>Leading end-to-end development of credit risk analytics and portfolio optimization dashboards for banking clients.</li>
+<li>Designed 10+ interactive dashboards integrating Alteryx for ETL and MS SQL for data warehousing.</li>
+<li>Optimized SQL queries and Power BI data models, reducing report refresh time by 40% and enhancing performance.</li>
+<li>Implemented advanced DAX for KPIs including Delinquency Rates, Portfolio Trends, and Customer Segmentation.</li>
+<li>Mentored junior developers and conducted stakeholder workshops for requirement gathering.</li>
+</ul>
+
+<p><strong>Capgemini</strong> | Sr. Analyst/Software Engineer | <em>Jan 2023 – Aug 2023</em></p>
+<ul>
+<li>Led technical transition of legacy reporting systems to modern cloud-based BI architectures.</li>
+<li>Standardized global data protocols for transactional healthcare databases.</li>
+</ul>
+
+<p><strong>Capgemini</strong> | Analyst/Software Engineer | <em>Jun 2021 – Dec 2022</em></p>
+<ul>
+<li>Engineered robust SQL-based data governance workflows and eliminated manual redundancy.</li>
+<li>Automated extraction and validation of sensitive patient transactional data.</li>
+<li>Developed 6-7 healthcare dashboards for EHR systems, tracking operational metrics and patient care KPIs.</li>
+</ul>
+
+<h3>KEY PROJECTS</h3>
+<ul>
+<li><strong>Banking Credit Risk Dashboard:</strong> Automated regulatory reporting and portfolio analysis using Power BI & SQL.</li>
+<li><strong>Healthcare EHR Analytics:</strong> Streamlined patient data processing and visualization for hospital management.</li>
+<li><strong>Portfolio Website:</strong> Developed a modern professional showcase with integrated AI avatar and analytics.</li>
+</ul>
+
+<h3>EDUCATION & CERTIFICATIONS</h3>
+<p><strong>Bachelor of Engineering (BE) in CSE</strong> | Bansal Institute of Science and Technology (RGPV University) | 2020</p>
+<p><strong>Certifications:</strong></p>
+<ul>
+    <li>Alteryx Designer Core Certified</li>
+    <li>HackerRank SQL (Basic & Intermediate)</li>
+    <li>Prompt Engineering (In Progress)</li>
+</ul>
+
+<p style="color: #ffffff; font-size: 1pt; line-height: 0;">
+    Keywords: Retail Analytics, Telecom Domain, Marketing Analytics, E-commerce, SDLC, Software Development Life Cycle,
+    Agile, Scrum, Data Warehousing, ETL, Python, Machine Learning, Predictive Modeling, Business Intelligence, KPI
+    Dashboards, Stakeholder Management, Requirement Gathering, AWS, Azure, Cloud Computing, Big Data, Data Science,
+    PostgreSQL, MySQL, Oracle, NoSQL, MongoDB, Redshift, Snowflake, Databricks, Delta Lake, Airflow, CI/CD, Docker,
+    Kubernetes, Jenkins, A/B Testing, Statistical Analysis, Data Mining, Data Cleansing, Data Governance, Master Data
+    Management (MDM), Looker, QlikView, SSRS, Power Apps, Power Automate, DAX Studio, Tabular Editor, Pandas, NumPy,
+    Scikit-learn, Matplotlib, Seaborn, Leadership, Team Management, Problem Solving, Critical Thinking, Cross-functional
+    Collaboration, Mentorship.
+</p>
+</body>
+</html>
