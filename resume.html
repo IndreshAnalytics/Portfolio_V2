@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indresh Tiwari - Resume</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 21cm;
+            /* A4 width */
+            min-height: 29.7cm;
+            /* A4 height */
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2E74B5;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #2E74B5;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .section-title {
+            background-color: #2E74B5;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+
+        .section-content {
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        .skills-table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .skill-category {
+            font-weight: bold;
+            color: #2E74B5;
+            width: 30%;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .role {
+            font-style: italic;
+            color: #555;
+        }
+
+        .date {
+            font-size: 13px;
+            color: #666;
+        }
+
+        ul {
+            margin: 5px 0 15px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Floating Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 24px;
+            background-color: #2E74B5;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            background-color: #1e5a8f;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5cm;
+            }
+
+            body {
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container {
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0 10px;
+                box-shadow: none;
+                border: none;
+                overflow: visible;
+            }
+
+            .download-btn {
+                display: none;
+            }
+
+            /* Ultra-compact styles for single page fit */
+            .header {
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                border-bottom-width: 1px;
+            }
+
+            .name {
+                font-size: 20px;
+                margin-bottom: 2px;
+            }
+
+            .title {
+                font-size: 14px;
+                margin-top: 0;
+                color: #2E74B5;
+            }
+
+            .contact-info {
+                margin-top: 2px;
+                font-size: 10px;
+                line-height: 1.2;
+            }
+
+            .section-title {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                padding: 2px 5px;
+                font-size: 12px;
+                line-height: 1.2;
+            }
+
+            .section-content {
+                font-size: 10px;
+                line-height: 1.3;
+            }
+
+            .skills-table {
+                margin-bottom: 5px;
+            }
+
+            .skills-table td {
+                padding: 2px;
+            }
+
+            .skill-category {
+                width: 25%;
+                font-size: 10px;
+                padding-right: 5px;
+            }
+
+            .job-header {
+                margin-bottom: 0;
+            }
+
+            .company {
+                font-size: 11px;
+            }
+
+            .date {
+                font-size: 10px;
+            }
+
+            .role {
+                font-size: 10px;
+                margin-bottom: 2px;
+                font-style: italic;
+            }
+
+            ul {
+                margin: 2px 0 5px 15px;
+            }
+
+            li {
+                margin-bottom: 1px;
+            }
+
+            p {
+                margin: 0 0 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="download-btn" onclick="window.print()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">INDRESH TIWARI</div>
+            <div class="title">Senior Data Analyst | AI-Augmented BI Developer</div>
+            <div class="contact-info">
+                <span>Pune, India</span> |
+                <a href="mailto:indresh.tiwari.job@gmail.com">indresh.tiwari.job@gmail.com</a> |
+                <a href="https://www.linkedin.com/in/indreshtiwari/" target="_blank">linkedin.com/in/indreshtiwari</a> |
+                <a href="https://github.com/indreshtiwari20" target="_blank">github.com/indreshtiwari20</a>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section-title">Professional Summary</div>
+        <div class="section-content">
+            <p>
+                Results-oriented Senior Data Analyst and BI Developer with 4+ years of experience transforming complex
+                data into actionable business insights.
+                Early adopter of agentic AI workflows (<strong>Google Antigravity</strong>) to accelerate development
+                and
+                optimize SQL/Python pipelines.
+                Proven track record in diverse business sectors, delivering high-impact visualizations that
+                improve operational efficiency and strategic decision-making.
+                Currently developing advanced data visualization solutions at Quauto Technologies and expanding deep
+                expertise in
+                AI-Augmented Data Engineering.
+            </p>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="section-title">Core Competencies</div>
+        <div class="section-content">
+            <ul style="column-count: 2; column-gap: 20px;">
+                <li>Business Intelligence & Analysis</li>
+                <li>Data Interpretation & Data Modelling</li>
+                <li>Generative AI Integration & Prompt Engineering</li>
+                <li>Dashboard Development (Power BI / Tableau)</li>
+                <li>ETL Processes & Big Data Analytics</li>
+                <li>Data Pipeline Development</li>
+                <li>Predictive Analytics & Statistical Modelling</li>
+                <li>Client Requirement Gathering</li>
+                <li>Business Strategy Support</li>
+                <li>Automated Insight Generation</li>
+            </ul>
+        </div>
+
+        <!-- IT Skills -->
+        <div class="section-title">IT Skills</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>Data Visualization:</strong> Power BI, Tableau, DAX, Google Analytics</li>
+                <li><strong>Databases:</strong> Microsoft SQL Server, PostgreSQL, Google Cloud, Alteryx</li>
+                <li><strong>AI & Automation:</strong> Google Antigravity (Advanced), ChatGPT, Gemini, GitHub Copilot,
+                    Python Automation</li>
+                <li><strong>Programming:</strong> Python (Pandas, NumPy), SQL</li>
+                <li><strong>Tools:</strong> Advanced Excel, Jira, Figma, PowerPoint</li>
+            </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="section-title">Professional Experience</div>
+        <div class="section-content">
+
+            <!-- Quauto -->
+            <div class="job-header">
+                <span class="company">Quauto Technologies Pvt Ltd</span>
+                <span class="date">August 2023 - Present</span>
+            </div>
+            <div class="role">Senior Data Analyst / BI Developer</div>
+            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
+            <ul>
+                <li>Leveraged <strong>Generative AI</strong> tools to optimize complex SQL queries and automate Python
+                    code generation, reducing development cycle time by 40%.</li>
+                <li>Developing comprehensive data solutions for a <strong>major Banking client</strong> covering
+                    <strong>Account Origination</strong>, <strong>Collections</strong>, and <strong>Recovery</strong>
+                    modules.</li>
+                <li>Contributed to the 'Analytics Optimization' initiative to streamline BAU financial reporting.</li>
+                <li>Simultaneously executed a high-priority <strong>Data Engineering project</strong> to parse
+                    unstructured communication data into actionable insights.</li>
+                <li>Developed automated ETL workflows using Alteryx to process high-volume financial transaction data,
+                    achieving a 60% reduction in manual reports.</li>
+                <li>Assisted junior developers with best practices for DAX optimization and scalable data modeling.</li>
+            </ul>
+
+            <!-- Capgemini - Sr. Analyst -->
+            <div class="job-header">
+                <span class="company">Capgemini</span>
+                <span class="date">January 2023 - August 2023</span>
+            </div>
+            <div class="role">Sr. Analyst / Software Engineer</div>
+            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
+            <ul>
+                <li>Promoted to Senior role to drive operational efficiency improvements for a <strong>Healthcare
+                        client</strong>.</li>
+                <li>Designed complex SQL queries to extract data for Power BI analysis, reducing report refresh times by
+                    40%.</li>
+                <li>Collaborated with business stakeholders to gather requirements and translate them into technical
+                    specifications for BI solutions.</li>
+                <li>Implemented automated data quality checks using SQL stored procedures, minimizing reporting errors
+                    by 25%.</li>
+            </ul>
+
+            <!-- Capgemini - Analyst -->
+            <div class="job-header">
+                <span class="company">Capgemini</span>
+                <span class="date">June 2021 - December 2022</span>
+            </div>
+            <div class="role">Analyst / Software Engineer</div>
+            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
+            <ul>
+                <li>Collaborated with global cross-functional teams to deliver key insights for <strong>Healthcare
+                        operations</strong> using Power BI and SQL.</li>
+                <li>Participated in daily stand-ups and sprint planning, ensuring timely delivery of data modules.</li>
+                <li>Maintained and optimized legacy operational reports, ensuring continuity and consistency for
+                    stakeholders.</li>
+                <li>Developed and tracked monthly KPI reports, conducting root cause analysis for performance
+                    deviations.</li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div class="section-title">Key Projects</div>
+        <div class="section-content">
+            <!-- Projects -->
+            <div class="section-title">Key Projects</div>
+            <div class="section-content">
+                <div class="job-header">
+                    <span class="company">End-to-End Banking Analytics Suite (Origination to Recovery)</span>
+                </div>
+                <ul>
+                    <li><strong>Account Origination:</strong> Streamlined customer onboarding by integrating credit
+                        checks and KYC data, reducing approval time by 20%.</li>
+                    <li><strong>Performance Monitoring:</strong> Developed a portfolio health dashboard to track
+                        delinquent accounts and risk exposure in real-time.</li>
+                    <li><strong>Collections & Recovery:</strong> Built predictive models to identify high-risk accounts
+                        early, optimizing recovery strategies and reducing bad debt by 15%.</li>
+                </ul>
+
+                <div class="job-header">
+                    <span class="company">Shopify E-commerce Marketing Analytics (Personal Project)</span>
+                </div>
+                <ul>
+                    <li>Engineered a unified view of customer journeys by integrating sales data with behavior metrics.
+                    </li>
+                    <li>Visualized key marketing KPIs including Customer Acquisition Cost (CAC), Return on Ad Spend
+                        (ROAS),
+                        and Lifetime Value (CLV).</li>
+                    <li>Applied Python-based customer segmentation (Clustering) to identify high-value cohorts for
+                        targeted marketing.</li>
+                </ul>
+
+                <div class="job-header">
+                    <span class="company">Clinical & Operational Performance Dashboard (Healthcare)</span>
+                </div>
+                <ul>
+                    <li>Developed a centralized analytics platform enabling operational teams to track patient flow,
+                        resource utilization, and efficiency metrics.</li>
+                    <li>Optimized scheduling processes by visualizing peak hours and staff availability.</li>
+                </ul>
+                <li>Architected an end-to-end Alteryx workflow to parse and structure complex, unstructured data
+                    sources.</li>
+                <li>Enabled data-driven decision making for a client by transforming raw text into
+                    actionable insights.</li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <div class="section-title">Education</div>
+            <div class="section-content">
+                <div class="job-header">
+                    <span class="company">Bachelor of Engineering (Computer Science and Engineering)</span>
+                    <span class="date">Year of Passing: 2020</span>
+                </div>
+                <div class="role">[College Name]</div>
+            </div>
+
+        </div>
+</body>
+
+</html>

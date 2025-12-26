@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-dark: #0a192f;
+    /* Deep Navy */
+    --bg-darker: #112240;
+    /* Dark Slate */
+    --primary-glow: #64ffda;
+    /* Cyan/Teal */
+    --secondary-glow: #0284c7;
+    /* Blue */
+    --glass-bg: rgba(17, 34, 64, 0.75);
+    --glass-border: rgba(100, 255, 218, 0.1);
+    --text-main: #ccd6f6;
+    /* Lightest Slate */
+    --text-muted: #8892b0;
+    /* Slate */
+    --card-hover: rgba(17, 34, 64, 0.9);
+    --shadow-soft: 0 10px 40px -10px rgba(2, 12, 27, 0.7);
+}
+
+/* Dark Mode logic removed for permanent Light Theme */
+
+/* Light Mode logic removed for Dark Theme */
+
+/* Buttons */
+.btn-premium {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    background: var(--primary-glow);
+    color: #fff;
+    border: 1px solid transparent;
+    /* Match border width of glass btn */
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Glass Button (Premium Alternative) */
+.btn-glass {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-main);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+
+
+.theme-toggle {
+    position: absolute;
+    right: 30px;
+    /* The absolute rightest side */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-glow);
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    background-attachment: fixed;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-main);
+}
+
+h1 {
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 40px;
+    left: 5%;
+    /* Align with Hero content padding */
+    transform: none;
+    /* Remove center transform */
+    width: auto;
+    /* Shrink to fit content */
+    min-width: 600px;
+    /* Ensure enough space for links */
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+    border-radius: 50px;
+    background: rgba(15, 23, 42, 0.6);
+    /* More transparent */
+    backdrop-filter: blur(12px);
+    /* Requested blur */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Transition handled by Framer Motion mostly, but base transition for resize/etc */
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+    position: absolute;
+    right: 90px;
+    /* Shifted left to make room for Theme Toggle */
+    left: auto;
+    transform: none;
+    font-size: 1.25rem;
+    /* Reduced from 24px (1.5rem) */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /* Gradient handled by HackerText now, but keeping for fallback */
+    color: var(--text-main);
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover {
+    color: var(--primary-glow);
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.btn-premium {
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
+    border-radius: 30px;
+    color: #fff !important;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulsing glow animation handled by Framer Motion, removing CSS hover transform conflict */
+
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 0;
+    /* Reset padding for grid alignment */
+    /* Deep Navy Gradient with Subtle Constellation Pattern */
+    background: radial-gradient(circle at 50% 50%, rgba(20, 40, 65, 0.4) 1px, transparent 1px),
+        linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+    background-size: 30px 30px, 100% 100%;
+    overflow: hidden;
+}
+
+/* Add a subtle overlay for more depth if needed */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(100, 255, 218, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.neon-text {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -1px;
+    animation: neonPulse 3s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(100, 255, 218, 0.3), 0 0 20px rgba(100, 255, 218, 0.2);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(100, 255, 218, 0.5), 0 0 30px rgba(100, 255, 218, 0.3);
+    }
+}
+
+.hero-content p {
+    /* Base styles, overridden by specific classes below */
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem !important;
+    /* Force increase */
+    line-height: 1.6;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    /* Strong shadow for contrast */
+}
+
+.highlight-text {
+    color: var(--primary-glow);
+    font-weight: 700;
+    font-size: 1.75rem;
+    /* Even larger for title */
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    /* Make it stand out */
+}
+
+.pitch-line {
+    color: #e2e8f0;
+    /* Brighter than muted */
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+/* Bento Grid Layouts */
+.section {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 40px auto;
+    /* Increased margin for separation */
+    background: rgba(10, 14, 26, 0.6);
+    /* Glass background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 30px;
+    transition: transform 0.3s, background 0.3s;
+    text-align: left;
+}
+
+/* Remove CSS hover since we use framer-motion, but keep for fallback */
+/* .skill-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-5px);
+} */
+
+.skill-card:nth-child(1) {
+    grid-column: span 2;
+}
+
+.skill-card:nth-child(4) {
+    grid-column: span 2;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block;
+    color: var(--primary-glow);
+    /* React-icons don't directly inherit gradient text clip easily */
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-tags span {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary-glow);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-top: 15px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.project-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.btn-icon:hover {
+    color: var(--primary-glow);
+}
+
+/* Contact */
+.contact-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0 20px;
+    }
+
+    .logo {
+        right: 70px;
+        /* Logo next to toggle on mobile */
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-main);
+        z-index: 1001;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 14, 26, 0.95);
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 1000;
+    }
+
+    .mobile-menu a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-main);
+    }
+
+    .mobile-menu .btn-premium {
+        font-size: 1.2rem;
+        padding: 15px 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card:nth-child(n) {
+        grid-column: span 1;
+    }
+}
+
+/* THREE.JS JARVIS CONTAINER */
+.jarvis-3d-scene {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
