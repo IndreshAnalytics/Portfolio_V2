@@ -6,6 +6,7 @@ import HackerText from './HackerText';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const basePath = import.meta.env.BASE_URL;
 
     // Theme logic moved to App.jsx for global state sharing
 
@@ -81,7 +82,7 @@ const Navbar = () => {
                     Projects
                 </motion.a>
                 <motion.a
-                    href="/resume/Indresh_Tiwari_Resume.html"
+                    href={`${basePath}resume/Indresh_Tiwari_Resume.html`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="nav-resume"
@@ -122,7 +123,7 @@ const Navbar = () => {
                         <a href="#about" onClick={toggleMenu}>About</a>
                         <a href="#skills" onClick={toggleMenu}>Skills</a>
                         <a href="https://github.com/IndreshAnalytics" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Projects</a>
-                        <a href="/resume/Indresh_Tiwari_Resume.html" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Resume</a>
+                        <a href={`${basePath}/resume/Indresh_Tiwari_Resume.html`} target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Resume</a>
                         <a href="#contact" className="btn-premium" onClick={toggleMenu}>Contact</a>
                     </motion.div>
                 )}

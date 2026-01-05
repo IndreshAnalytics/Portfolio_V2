@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import JarvisMesh from './components/JarvisMesh';
+import ErrorBoundary from './components/ErrorBoundary';
 import Preloader from './components/Preloader';
 import SystemArchitecture from './components/SystemArchitecture';
 
@@ -27,7 +28,7 @@ function App() {
   // Theme logic removed - Permanent Light Theme
   const theme = 'light';
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   console.log('App.jsx: component rendering, loading state:', loading);
 
   useEffect(() => {
@@ -53,7 +54,9 @@ function App() {
         >
           {/* Global 3D Background */}
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
-            <JarvisMesh theme={theme} />
+            <ErrorBoundary>
+              <JarvisMesh theme={theme} />
+            </ErrorBoundary>
           </div>
 
           <Navbar theme={theme} />

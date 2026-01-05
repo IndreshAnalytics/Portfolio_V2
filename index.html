@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-v2</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/My_Portfolio/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio-v2</title>
+</head>
+<script>
+  window.onerror = function (message, source, lineno, colno, error) {
+    var errorContainer = document.createElement('div');
+    errorContainer.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#ffebee;color:#c62828;padding:20px;z-index:999999;border-bottom:1px solid #c62828;font-family:monospace;';
+    errorContainer.innerHTML = '<h3>System Error</h3><p>' + message + '</p><p>' + source + ':' + lineno + '</p>';
+    document.body.appendChild(errorContainer);
+  };
+</script>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
