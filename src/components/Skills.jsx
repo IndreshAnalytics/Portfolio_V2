@@ -5,35 +5,35 @@ import { FaChartBar, FaCogs, FaBriefcase } from 'react-icons/fa';
 const Skills = () => {
     const technicalSkills = [
         {
-            category: "Phase 1: Data Engineering",
+            category: "Phase 1: Fabric Architecture",
             icon: <FaCogs />,
             skills: [
-                { name: "MS SQL Server", level: 95, label: "Advanced", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" },
-                { name: "Raw Data Extraction", level: 90, label: "Expert", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" }
+                { name: "Microsoft Fabric (OneLake)", level: 95, label: "Expert", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" },
+                { name: "Medallion Architecture", level: 90, label: "Architect", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" }
             ]
         },
         {
-            category: "Phase 2: ETL & Logic",
+            category: "Phase 2: Data Engineering",
             icon: <FaCogs />,
             skills: [
-                { name: "Alteryx Designer", level: 90, label: "Advanced", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" },
-                { name: "Unstructured Data Processing", level: 85, label: "Specialist", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" }
+                { name: "SQL & Alteryx", level: 90, label: "Advanced", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" },
+                { name: "Semantic Models (DirectLake)", level: 85, label: "Specialist", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" }
             ]
         },
         {
-            category: "Phase 3: Automation",
+            category: "Phase 3: Automation & AI",
             icon: <FaCogs />,
             skills: [
                 { name: "Python (Pandas)", level: 80, label: "Proficient", color: "linear-gradient(90deg, #0aff9d 0%, #00e5ff 100%)" },
-                { name: "ChatGPT / Gemini / Copilot", level: 90, label: "Integration", color: "linear-gradient(90deg, #0aff9d 0%, #00e5ff 100%)" }
+                { name: "Copilot & AI Integration", level: 90, label: "Innovative", color: "linear-gradient(90deg, #0aff9d 0%, #00e5ff 100%)" }
             ]
         },
         {
-            category: "Phase 4: Visualization",
+            category: "Phase 4: Power BI Ecosystem",
             icon: <FaChartBar />,
             skills: [
-                { name: "Power BI Services", level: 95, label: "Expert", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" },
-                { name: "Workspaces & Gateway Mgmt", level: 85, label: "Admin", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" }
+                { name: "Advanced DAX & Security", level: 95, label: "Expert", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" },
+                { name: "Governance & Administration", level: 85, label: "Admin", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" }
             ]
         }
     ];
