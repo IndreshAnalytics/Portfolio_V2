@@ -17,7 +17,7 @@ const Hero = () => {
 
                     {/* Job Title - Moved Below Name */}
                     <span className="highlight-text hero-title">
-                        SENIOR ANALYTICS ENGINEER | QUAUTO TECHNOLOGIES
+                        SENIOR ANALYTICS ENGINEER | EXPERT POWER BI DEVELOPER
                     </span>
 
                     <motion.p
@@ -26,7 +26,7 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
                     >
-                        Engineering End-to-End Data Architectures for Global Enterprise Solutions.
+                        Engineering End-to-End Microsoft Fabric Architectures for Global Enterprise Solutions.
                     </motion.p>
 
                     <motion.div

@@ -19,8 +19,8 @@ const Experience = () => {
             description: (
                 <>
                     <div style={{ marginBottom: '15px' }}>
-                        Specializing in <span className="tech-keyword">End-to-End Microsoft Fabric architectures</span> for the last 8 months.
-                        Leading the modernization of data platforms using <span className="tech-keyword">OneLake</span> and <span className="tech-keyword">Medallion Architecture</span>.
+                        Specializing in <strong>End-to-End Power BI Development</strong> and <strong>Microsoft Fabric</strong>.
+                        Delivered high-impact executive dashboards and upgraded workflow to <span className="tech-keyword">Medallion Architecture</span>.
                     </div>
 
                     <div className="workflow-section">
@@ -28,7 +28,7 @@ const Experience = () => {
                         <div className="workflow-steps">
                             <span>SQL & Alteryx (Ingestion)</span>
                             <FaArrowRight className="workflow-arrow" />
-                            <span className="tech-keyword">Microsoft Fabric (Shortcuts/Gold Layer)</span>
+                            <span className="tech-keyword">Microsoft Fabric (OneLake)</span>
                             <FaArrowRight className="workflow-arrow" />
                             <span>Power BI (Executive Intelligence)</span>
                         </div>
@@ -43,7 +43,7 @@ const Experience = () => {
             duration: "Jan 2023 - Aug 2023",
             description: (
                 <>
-                    Executed cloud migration strategies for <span className="tech-keyword">Global Solutions</span> providers.
+                    Executed cloud migration strategies for <span className="tech-keyword">Enterprise Solutions</span> providers.
                     Migrated legacy reporting systems to modern BI architectures, standardizing global data protocols for high-volume transactional databases.
                 </>
             ),
@@ -56,7 +56,7 @@ const Experience = () => {
             description: (
                 <>
                     Engineered robust SQL-based data governance workflows for <span className="tech-keyword">Enterprise Data Environments</span>.
-                    Eliminated manual redundancy by automating the extraction and validation of sensitive transactional data.
+                    Eliminated manual redundancy by automating the extraction and validation of sensitive high-volume transactional data.
                 </>
             ),
             location: "Pune, India"

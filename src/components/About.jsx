@@ -21,11 +21,11 @@ const About = () => {
                     viewport={{ once: true }}
                 >
                     <p style={{ fontSize: '1.1rem' }}>
-                        I am a <strong>Senior Analytics Engineer</strong> and <strong>End-to-End Data Specialist</strong> with 4+ years of experience across the enterprise landscape.
+                        I am a <strong>Senior Analytics Engineer</strong> and <strong>Expert Power BI Developer</strong> with 4.5+ years of experience specializing in End-to-End Development.
                         <br /><br />
-                        My expertise lies in building robust <strong>Automated Data Pipelines</strong>—transforming raw, disparate data sources into structured, actionable insights using <strong>MS SQL, Alteryx, and Power BI</strong>.
+                        My expertise lies in bridging the gap between complex data environments and executive-level insights, with a focus on <strong>Microsoft Fabric ecosystems</strong> for high-performance reporting.
                         <br /><br />
-                        Currently at <strong>Quauto Technologies</strong>, I manage the full data lifecycle for high-priority enterprise initiatives, focusing on data integrity, process automation, and scalable cloud delivery.
+                        Currently at <strong>Quauto Technologies</strong>, I develop enterprise-grade Power BI solutions using <strong>OneLake and Medallion Architecture</strong> to streamline the analytics lifecycle.
                     </p>
                 </motion.div>
             </div>
