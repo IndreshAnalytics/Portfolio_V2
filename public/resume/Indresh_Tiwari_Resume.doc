@@ -1,103 +1,307 @@
-<html xmlns:o='urn:schemas-microsoft-com:office:office'
-xmlns:w='urn:schemas-microsoft-com:office:word'
-xmlns='http://www.w3.org/TR/REC-html40'>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Indresh Tiwari - Data Analyst Resume</title>
-<style>
-/* Clean styles for Word import */
-body { font-family: 'Calibri', Arial, sans-serif; font-size: 11pt; }
-h1 { font-size: 18pt; color: #0a192f; margin-bottom: 2pt; }
-h2 { font-size: 12pt; color: #0056b3; margin-bottom: 10pt; font-weight: bold; }
-h3 { font-size: 11pt; color: #0a192f; border-bottom: 1px solid #ddd; margin-top: 15pt; margin-bottom: 5pt; text-transform: uppercase; font-weight: bold; }
-p { margin: 0 0 5pt 0; }
-a { color: #0056b3; text-decoration: none; }
-ul { margin: 0 0 0 20pt; padding: 0; }
-li { margin-bottom: 3pt; }
-table { width: 100%; border-collapse: collapse; }
-td { vertical-align: top; padding-bottom: 3pt; }
-.label { font-weight: bold; width: 150px; color: #0a192f; }
-.header-table td { border: none; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indresh Tiwari - Senior Power BI Developer</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #222;
+            line-height: 1.28;
+            font-size: 10pt;
+        }
+
+        .container {
+            width: 21cm;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 0.4in;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 3px;
+            margin-bottom: 6px;
+        }
+
+        .name {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+
+        .title {
+            font-size: 11pt;
+            color: #2E74B5;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .contact-info {
+            font-size: 9pt;
+            color: #444;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .contact-item a {
+            color: #444;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Sections */
+        .section-title {
+            color: #2E74B5;
+            font-size: 11pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            margin-top: 8px;
+            margin-bottom: 4px;
+            padding-bottom: 2px;
+        }
+
+        .section-content {
+            margin-bottom: 6px;
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 8px;
+        }
+
+        /* Skills */
+        .skills-row {
+            display: flex;
+            margin-bottom: 2px;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            margin-right: 8px;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+
+        /* Experience */
+        .job-block {
+            margin-bottom: 8px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10.2pt;
+            margin-bottom: 2px;
+        }
+
+        .company-role {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .role-highlight {
+            color: #2E74B5;
+        }
+
+        .date-location {
+            font-size: 9.5pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        ul {
+            margin: 0 0 0 16px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1px;
+            text-align: justify;
+        }
+
+        /* Education & Certs merged */
+        .edu-cert-block {
+            margin-top: 4px;
+        }
+
+        /* ATS Hidden */
+        .ats-hidden {
+            color: white;
+            font-size: 0px;
+            line-height: 0;
+            height: 0;
+            overflow: hidden;
+            display: none; /* Hide from Word */
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">INDRESH TIWARI</div>
+            <div class="title">Senior Power BI Developer / Business Analyst</div>
+            <div class="contact-info">
+                <span class="contact-item">
+                    <a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a>
+                </span> |
+                <span class="contact-item">
+                    <a href="tel:+919926001335">+91-9926001335</a>
+                </span> |
+                <span class="contact-item">
+                    Pune, India
+                </span> |
+                <span class="contact-item">
+                    <a href="https://linkedin.com/in/indreshtiwari" target="_blank">LinkedIn</a>
+                </span> |
+                <span class="contact-item">
+                    <a href="https://indreshanalytics.github.io/Portfolio_V2/" target="_blank">Portfolio</a>
+                </span>
+            </div>
+        </div>
 
-<!-- Header Table for alignment -->
-<table class="header-table">
-<tr>
-    <td>
-        <h1>INDRESH TIWARI</h1>
-        <h2>SENIOR ANALYTICS ENGINEER | POWER BI DEVELOPER</h2>
-    </td>
-    <td align="right" style="text-align: right; font-size: 10pt; color: #555;">
-        Pune, India | +91-9926001335<br/>
-        indreshtiwa@gmail.com<br/>
-        linkedin.com/in/indreshtiwari<br/>
-        github.com/IndreshAnalytics
-    </td>
-</tr>
-</table>
+        <!-- Profile -->
+        <div class="section-title">Professional Profile</div>
+        <div class="section-content summary">
+            Results-driven Senior Power BI Developer and Business Analyst specializing in End-to-End BI Solution
+            Architecture. Expert in managing the full data lifecycle—from gathering raw business requirements to
+            deploying scalable Power BI datasets. Proven track record of orchestrating complex ETL pipelines using SQL
+            and Alteryx, reducing reporting latency by 40%, and leading successful UAT phases for global enterprise
+            stakeholders.
+        </div>
 
-<h3>PROFESSIONAL SUMMARY</h3>
-<p>Results-driven Senior Analytics Engineer with 4.5+ years of experience engineering end-to-end analytics solutions across Banking and Healthcare. Proven track record of reducing reporting time by 40% and optimizing data architecture. Expert in Power BI, SQL, Alteryx, and emerging GenAI tools (ChatGPT, Gemini, Copilot).</p>
+        <!-- Skills -->
+        <div class="section-title">Technical Skills</div>
+        <div class="section-content">
+            <div class="skills-row">
+                <span class="skill-label">BI & Analysis:</span>
+                <span>Power BI, DAX, Power Query, Tableau, Business Analysis, Requirement Gathering, UAT.</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Engineering:</span>
+                <span>SQL Server, Alteryx, Python, Data Modeling (Star Schema), ETL Automation.</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Cloud/AI:</span>
+                <span>Azure, Jira, GitHub, Figma, ChatGPT, Copilot.</span>
+            </div>
+        </div>
 
-<h3>TECHNICAL SKILLS</h3>
-<table>
-<tr><td class="label">Business Intelligence:</td><td>Power BI (Desktop & Service), Tableau, DAX, Power Query, Advanced Excel</td></tr>
-<tr><td class="label">Data Engineering:</td><td>Python, SQL Server, Alteryx, Data Modeling</td></tr>
-<tr><td class="label">Cloud & Design:</td><td>Google Cloud Platform, BigQuery, Jira, GitHub, Figma</td></tr>
-<tr><td class="label">AI & Automation:</td><td>ChatGPT, Gemini, Copilot, Prompt Engineering</td></tr>
-</table>
+        <!-- Experience -->
+        <div class="section-title">Professional Experience</div>
+        <div class="section-content">
+            <!-- Quauto -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Senior Power BI Developer / Business
+                            Analyst</span> | Quauto Technologies</span>
+                    <span class="date-location">Aug 2023 – Present | Remote</span>
+                </div>
+                <ul>
+                    <li><strong>Requirement Gathering & Analysis:</strong> Executed the initial discovery phase,
+                        collaborating directly with clients to translate vague business goals into precise technical
+                        specifications and KPI definitions.</li>
+                    <li><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable
+                        <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support
+                        high-performance reporting on large-scale enterprise datasets.
+                    </li>
+                    <li><strong>ETL Orchestration:</strong> Built and maintained robust backend data pipelines using
+                        <strong>MS SQL and Alteryx</strong>, automating the extraction, transformation, and loading of
+                        data from disparate sources.
+                    </li>
+                    <li><strong>Advanced Development:</strong> Developed 10+ interactive dashboards using complex
+                        <strong>DAX measures</strong>, Calculation Groups, and Row-Level Security (RLS) to ensure data
+                        granularity and security.
+                    </li>
+                    <li><strong>Performance Optimization:</strong> Optimized SQL queries and Power BI dataset refresh
+                        schedules, successfully reducing report latency by 40% and improving render times.</li>
+                    <li><strong>UAT & Deployment:</strong> Managed the End-to-End <strong>User Acceptance Testing
+                            (UAT)</strong> lifecycle, iterating on dashboard features based on stakeholder feedback
+                        before final production deployment.</li>
+                </ul>
+            </div>
 
-<h3>WORK EXPERIENCE</h3>
+            <!-- Capgemini Sr -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Sr. Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jan 2023 – Aug 2023 | Pune</span>
+                </div>
+                <ul>
+                    <li><strong>Legacy Migration:</strong> Executed the technical transition of legacy reporting systems
+                        to modern <strong>Cloud-based BI architectures</strong> using SQL and Power BI, ensuring zero
+                        downtime.</li>
+                    <li><strong>Data Standardization:</strong> Implemented standard global data protocols for
+                        high-volume transactional databases using <strong>Advanced SQL</strong>, ensuring consistency
+                        across regional reporting units.</li>
+                    <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
+                        <strong>Azure Cloud</strong>, creating scalable data pipelines that support enterprise-level
+                        reporting.
+                    </li>
+                    <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
+                        teams and non-technical business units to ensure alignment on data definitions.</li>
+                </ul>
+            </div>
 
-<p><strong>Quauto Technologies</strong> | Senior Analytics Engineer | <em>Aug 2023 – Present</em></p>
-<ul>
-<li>Leading end-to-end development of credit risk analytics and portfolio optimization dashboards for banking clients.</li>
-<li>Designed 10+ interactive dashboards integrating Alteryx for ETL and MS SQL for data warehousing.</li>
-<li>Optimized SQL queries and Power BI data models, reducing report refresh time by 40% and enhancing performance.</li>
-<li>Implemented advanced DAX for KPIs including Delinquency Rates, Portfolio Trends, and Customer Segmentation.</li>
-<li>Mentored junior developers and conducted stakeholder workshops for requirement gathering.</li>
-</ul>
+            <!-- Capgemini Jr -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jun 2021 – Dec 2022 | Pune</span>
+                </div>
+                <ul>
+                    <li><strong>Data Governance:</strong> Engineered <strong>SQL-based data governance
+                            workflows</strong> that eliminated manual redundancy and improved overall data integrity by
+                        30%.</li>
+                    <li><strong>Compliance Automation:</strong> Automated the extraction and validation of sensitive
+                        user transactional data using <strong>SQL Scripts</strong>, ensuring compliance with strict data
+                        protection standards.</li>
+                    <li><strong>Operational Reporting:</strong> Developed and maintained 6-7 critical operational
+                        dashboards using <strong>Power BI</strong>, tracking key performance indicators (KPIs) for
+                        internal efficiency.</li>
+                </ul>
+            </div>
+        </div>
 
-<p><strong>Capgemini</strong> | Sr. Analyst/Software Engineer | <em>Jan 2023 – Aug 2023</em></p>
-<ul>
-<li>Led technical transition of legacy reporting systems to modern cloud-based BI architectures.</li>
-<li>Standardized global data protocols for transactional healthcare databases.</li>
-</ul>
-
-<p><strong>Capgemini</strong> | Analyst/Software Engineer | <em>Jun 2021 – Dec 2022</em></p>
-<ul>
-<li>Engineered robust SQL-based data governance workflows and eliminated manual redundancy.</li>
-<li>Automated extraction and validation of sensitive patient transactional data.</li>
-<li>Developed 6-7 healthcare dashboards for EHR systems, tracking operational metrics and patient care KPIs.</li>
-</ul>
-
-<h3>KEY PROJECTS</h3>
-<ul>
-<li><strong>Banking Credit Risk Dashboard:</strong> Automated regulatory reporting and portfolio analysis using Power BI & SQL.</li>
-<li><strong>Healthcare EHR Analytics:</strong> Streamlined patient data processing and visualization for hospital management.</li>
-<li><strong>Portfolio Website:</strong> Developed a modern professional showcase with integrated AI avatar and analytics.</li>
-</ul>
-
-<h3>EDUCATION & CERTIFICATIONS</h3>
-<p><strong>Bachelor of Engineering (BE) in CSE</strong> | Bansal Institute of Science and Technology (RGPV University) | 2020</p>
-<p><strong>Certifications:</strong></p>
-<ul>
-    <li>Alteryx Designer Core Certified</li>
-    <li>HackerRank SQL (Basic & Intermediate)</li>
-    <li>Prompt Engineering (In Progress)</li>
-</ul>
-
-<p style="color: #ffffff; font-size: 1pt; line-height: 0;">
-    Keywords: Retail Analytics, Telecom Domain, Marketing Analytics, E-commerce, SDLC, Software Development Life Cycle,
-    Agile, Scrum, Data Warehousing, ETL, Python, Machine Learning, Predictive Modeling, Business Intelligence, KPI
-    Dashboards, Stakeholder Management, Requirement Gathering, AWS, Azure, Cloud Computing, Big Data, Data Science,
-    PostgreSQL, MySQL, Oracle, NoSQL, MongoDB, Redshift, Snowflake, Databricks, Delta Lake, Airflow, CI/CD, Docker,
-    Kubernetes, Jenkins, A/B Testing, Statistical Analysis, Data Mining, Data Cleansing, Data Governance, Master Data
-    Management (MDM), Looker, QlikView, SSRS, Power Apps, Power Automate, DAX Studio, Tabular Editor, Pandas, NumPy,
-    Scikit-learn, Matplotlib, Seaborn, Leadership, Team Management, Problem Solving, Critical Thinking, Cross-functional
-    Collaboration, Mentorship.
-</p>
+        <!-- Education & Certs merged -->
+        <div class="section-title">Education & Certifications</div>
+        <div class="section-content">
+            <div class="job-header">
+                <strong>BE in CSE</strong> | Bansal Institute of Science & Technology | 2020
+            </div>
+            <div style="font-size: 10.5pt; margin-top: 4px;">
+                <strong>Certifications:</strong> Microsoft Certified: Fabric Analytics Engineer Associate (DP-600) [In
+                Progress] | Alteryx Designer Core | HackerRank SQL.
+            </div>
+        </div>
+    </div>
 </body>
 </html>

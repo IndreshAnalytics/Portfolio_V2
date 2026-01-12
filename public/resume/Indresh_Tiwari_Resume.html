@@ -190,10 +190,18 @@
         }
 
         /* Download Btn */
-        .download-btn {
+        /* Floating Actions Container */
+        .actions-container {
             position: fixed;
             bottom: 30px;
             right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .download-btn {
             padding: 12px 24px;
             background-color: #2E74B5;
             color: white;
@@ -202,21 +210,32 @@
             cursor: pointer;
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
             font-family: inherit;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
+            text-decoration: none;
+            font-size: 10.5pt;
         }
 
         .download-btn:hover {
             background-color: #1e5a8f;
         }
 
+        .download-btn.doc-btn {
+            background-color: #fff;
+            color: #2E74B5;
+            border: 2px solid #2E74B5;
+        }
+
+        .download-btn.doc-btn:hover {
+            background-color: #f0f8ff;
+        }
+
         @media print {
             @page {
                 margin: 0;
-                /* Eliminates browser default headers/footers */
                 size: auto;
             }
 
@@ -229,13 +248,11 @@
                 width: 100%;
                 margin: 0;
                 padding: 0.4in;
-                /* Consistent with screen */
                 box-shadow: none;
                 min-height: auto;
-                /* CRITICAL: Prevent forcing 2nd page if content is short */
             }
 
-            .download-btn {
+            .actions-container {
                 display: none;
             }
 
@@ -248,12 +265,21 @@
 </head>
 
 <body>
-    <button class="download-btn" onclick="window.print()">
-        <svg class="icon" style="fill:white; width: 16px; height: 16px; margin:0;" viewBox="0 0 24 24">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-        </svg>
-        Download PDF
-    </button>
+    <div class="actions-container">
+        <button class="download-btn" onclick="window.print()">
+            <svg class="icon" style="fill:white; width: 16px; height: 16px; margin:0;" viewBox="0 0 24 24">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg>
+            Download PDF
+        </button>
+        <a href="Indresh_Tiwari_Resume.doc" class="download-btn doc-btn" download>
+            <svg class="icon" style="fill:#2E74B5; width: 16px; height: 16px; margin:0;" viewBox="0 0 24 24">
+                <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+            </svg>
+            Download DOC
+        </a>
+    </div>
 
     <div class="container">
         <!-- Header -->
