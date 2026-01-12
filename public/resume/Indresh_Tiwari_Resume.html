@@ -12,8 +12,8 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #222;
-            line-height: 1.25;
-            font-size: 9.5pt;
+            line-height: 1.35;
+            font-size: 10.5pt;
         }
 
         .container {
@@ -21,8 +21,8 @@
             min-height: 29.7cm;
             margin: 20px auto;
             background-color: #fff;
-            padding: 15px 25px;
-            /* Standard A4 Padding */
+            padding: 0.5in;
+            /* Narrow Margins for 1-page fit */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
             position: relative;
@@ -32,24 +32,24 @@
         .header {
             text-align: center;
             border-bottom: 2px solid #2E74B5;
-            padding-bottom: 3px;
-            margin-bottom: 6px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .name {
-            font-size: 20pt;
+            font-size: 22pt;
             font-weight: bold;
             color: #000;
             text-transform: uppercase;
             line-height: 1;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .title {
-            font-size: 11pt;
+            font-size: 12pt;
             color: #2E74B5;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .contact-info {
@@ -58,15 +58,14 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 5px;
+            /* Tight gap to keep on fewer lines */
             align-items: center;
-            margin-top: 3px;
         }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            display: inline-block;
+            white-space: nowrap;
         }
 
         .contact-item a {
@@ -79,40 +78,31 @@
             text-decoration: underline;
         }
 
-        .icon {
-            width: 12px;
-            height: 12px;
-            fill: #777;
-            position: relative;
-            top: 1px;
-        }
-
-        /* Section Styling */
+        /* Sections */
         .section-title {
             color: #2E74B5;
-            font-size: 10pt;
+            font-size: 11pt;
             font-weight: bold;
             text-transform: uppercase;
             border-bottom: 1px solid #ddd;
-            margin-top: 6px;
-            margin-bottom: 3px;
-            padding-bottom: 1px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
         }
 
         .section-content {
-            margin-bottom: 3px;
+            margin-bottom: 8px;
         }
 
-        /* Summary Paragraph */
         .summary {
             text-align: justify;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
-        /* Compact Skills */
+        /* Skills */
         .skills-row {
-            margin-bottom: 2px;
             display: flex;
+            margin-bottom: 2px;
         }
 
         .skill-label {
@@ -122,16 +112,17 @@
             flex-shrink: 0;
         }
 
-        /* Experience Block */
+        /* Experience */
         .job-block {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 9.5pt;
+            font-size: 10.5pt;
+            margin-bottom: 2px;
         }
 
         .company-role {
@@ -144,38 +135,41 @@
         }
 
         .date-location {
-            font-size: 9pt;
+            font-size: 10pt;
             color: #666;
             font-style: italic;
         }
 
         ul {
-            margin: 1px 0 2px 16px;
+            margin: 2px 0 0 16px;
             padding: 0;
         }
 
         li {
-            margin-bottom: 1px;
+            margin-bottom: 2px;
             text-align: justify;
         }
 
-        /* ATS Hidden Text - The Secret Sauce */
+        /* Education & Certs merged */
+        .edu-cert-block {
+            margin-top: 5px;
+        }
+
+        /* ATS Hidden */
         .ats-hidden {
             color: white;
-            /* Invisible to eye */
-            font-size: 1px;
+            font-size: 6px;
             line-height: 0;
             height: 0;
             overflow: hidden;
             display: block;
-            /* Ensure it's rendered in DOM */
         }
 
         .ats-hidden * {
             color: white !important;
         }
 
-        /* Floating Download Button */
+        /* Download Btn */
         .download-btn {
             position: fixed;
             bottom: 30px;
@@ -189,9 +183,6 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
             font-family: inherit;
         }
 
@@ -202,7 +193,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 0.3cm;
+                margin: 0.5in;
             }
 
             body {
@@ -213,26 +204,19 @@
             .container {
                 width: 100%;
                 margin: 0;
-                padding: 0 10px;
+                padding: 0;
                 box-shadow: none;
             }
 
             .download-btn {
                 display: none;
             }
-
-            a {
-                text-decoration: none;
-                color: #000;
-            }
         }
     </style>
 </head>
 
 <body>
-    <button class="download-btn" onclick="window.print()">
-        Download PDF
-    </button>
+    <button class="download-btn" onclick="window.print()">Download PDF</button>
 
     <div class="container">
         <!-- Header -->
@@ -240,63 +224,17 @@
             <div class="name">INDRESH TIWARI</div>
             <div class="title">Senior Power BI Developer / Business Analyst</div>
             <div class="contact-info">
-                <!-- Location -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg>
-                    <span>Pune, India</span>
-                </div>
-
-                <!-- Phone -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                    </svg>
-                    <a href="tel:+919926001335">+91-9926001335</a>
-                </div>
-
-                <!-- Email -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
-                    <a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a>
-                </div>
-
-                <!-- LinkedIn -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    <a href="https://linkedin.com/in/indreshtiwari" target="_blank">linkedin.com/in/indreshtiwari</a>
-                </div>
-
-                <!-- Portfolio (Globe Icon) -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                    </svg>
-                    <a href="https://indreshanalytics.github.io/Portfolio_V2/" target="_blank">Portfolio</a>
-                </div>
-
-                <!-- GitHub -->
-                <div class="contact-item">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    <a href="https://github.com/IndreshAnalytics" target="_blank">GitHub</a>
-                </div>
+                <span class="contact-item"><a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a></span> |
+                <span class="contact-item"><a href="tel:+919926001335">+91-9926001335</a></span> |
+                <span class="contact-item">Pune, India</span> |
+                <span class="contact-item"><a href="https://linkedin.com/in/indreshtiwari"
+                        target="_blank">LinkedIn</a></span> |
+                <span class="contact-item"><a href="https://indreshanalytics.github.io/Portfolio_V2/"
+                        target="_blank">Portfolio</a></span>
             </div>
         </div>
 
-        <!-- Summary -->
+        <!-- Profile -->
         <div class="section-title">Professional Profile</div>
         <div class="section-content summary">
             Results-driven Senior Power BI Developer and Business Analyst specializing in End-to-End BI Solution
@@ -311,22 +249,21 @@
         <div class="section-content">
             <div class="skills-row">
                 <span class="skill-label">BI & Analysis:</span>
-                <span>Power BI, DAX, Power Query, Tableau, Business Analysis, Requirement Gathering, UAT</span>
+                <span>Power BI, DAX, Power Query, Tableau, Business Analysis, Requirement Gathering, UAT.</span>
             </div>
             <div class="skills-row">
                 <span class="skill-label">Engineering:</span>
-                <span>SQL Server, Alteryx, Python, Data Modeling (Star Schema), ETL Automation</span>
+                <span>SQL Server, Alteryx, Python, Data Modeling (Star Schema), ETL Automation.</span>
             </div>
             <div class="skills-row">
                 <span class="skill-label">Cloud/AI:</span>
-                <span>Azure, Jira, GitHub, Figma, ChatGPT, Copilot</span>
+                <span>Azure, Jira, GitHub, Figma, ChatGPT, Copilot.</span>
             </div>
         </div>
 
         <!-- Experience -->
         <div class="section-title">Professional Experience</div>
         <div class="section-content">
-
             <!-- Quauto -->
             <div class="job-block">
                 <div class="job-header">
@@ -335,8 +272,8 @@
                     <span class="date-location">Aug 2023 – Present | Remote</span>
                 </div>
                 <ul>
-                    <li><strong>Requirement Gathering & Analysis:</strong> Led the initial discovery phase,
-                        collaborating directly with C-level clients to translate vague business goals into precise
+                    <li><strong>Requirement Gathering & Analysis:</strong> Executed the initial discovery phase,
+                        collaborating directly with clients to translate vague business goals into precise
                         technical specifications and KPI definitions.</li>
                     <li><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable
                         <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support
@@ -352,9 +289,9 @@
                     </li>
                     <li><strong>Performance Optimization:</strong> Optimized SQL queries and Power BI dataset refresh
                         schedules, successfully reducing report latency by 40% and improving render times.</li>
-                    <li><strong>UAT & Deployment:</strong> Managed the End-to-End **User Acceptance Testing (UAT)**
-                        lifecycle, iterating on dashboard features based on stakeholder feedback before final production
-                        deployment.</li>
+                    <li><strong>UAT & Deployment:</strong> Managed the End-to-End <strong>User Acceptance Testing
+                            (UAT)</strong> lifecycle, iterating on dashboard features based on stakeholder feedback
+                        before final production deployment.</li>
                 </ul>
             </div>
 
@@ -370,10 +307,14 @@
                         to modern <strong>Cloud-based BI architectures</strong> using SQL and Power BI, ensuring zero
                         downtime.</li>
                     <li><strong>Data Standardization:</strong> Implemented standard global data protocols for
-                        high-volume transactional databases using **Advanced SQL**, ensuring consistency across regional
-                        reporting units.</li>
-
-
+                        high-volume transactional databases using <strong>Advanced SQL</strong>, ensuring consistency
+                        across regional reporting units.</li>
+                    <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
+                        <strong>Azure Cloud</strong>, creating scalable data pipelines that support enterprise-level
+                        reporting.
+                    </li>
+                    <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
+                        teams and non-technical business units to ensure alignment on data definitions.</li>
                 </ul>
             </div>
 
@@ -385,36 +326,36 @@
                     <span class="date-location">Jun 2021 – Dec 2022 | Pune</span>
                 </div>
                 <ul>
-                    <li><strong>Data Governance:</strong> Engineered **SQL-based data governance workflows** that
-                        eliminated manual redundancy and improved overall data integrity by 30%.</li>
+                    <li><strong>Data Governance:</strong> Engineered <strong>SQL-based data governance
+                            workflows</strong> that eliminated manual redundancy and improved overall data integrity by
+                        30%.</li>
                     <li><strong>Compliance Automation:</strong> Automated the extraction and validation of sensitive
-                        user transactional data using **SQL Scripts**, ensuring compliance with strict data protection
-                        standards.</li>
+                        user transactional data using <strong>SQL Scripts</strong>, ensuring compliance with strict data
+                        protection standards.</li>
                     <li><strong>Operational Reporting:</strong> Developed and maintained 6-7 critical operational
-                        dashboards using **Power BI**, tracking key performance indicators (KPIs) for internal
-                        efficiency.</li>
-                    <li><strong>Process Improvement:</strong> Identified bottlenecks in manual reporting processes and
-                        replaced them with automated SQL views and Power BI datasets.</li>
+                        dashboards using <strong>Power BI</strong>, tracking key performance indicators (KPIs) for
+                        internal efficiency.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Education -->
+        <!-- Education & Certs merged -->
         <div class="section-title">Education & Certifications</div>
         <div class="section-content">
             <div class="job-header">
-                <span class="company-role">BE in CSE</span> | Bansal Institute of Science & Technology | 2020
+                <strong>BE in CSE</strong> | Bansal Institute of Science & Technology | 2020
             </div>
-            <div style="font-size: 9.5pt; margin-top: 4px;">
-                <strong>Certifications:</strong> Alteryx Designer Core, HackerRank SQL. <br>
-                <strong>Ongoing:</strong> Prompt Engineering Certification, Microsoft Fabric Certificate.
+            <div style="font-size: 10.5pt; margin-top: 4px;">
+                <strong>Certifications:</strong> Microsoft Certified: Fabric Analytics Engineer Associate (DP-600) [In
+                Progress] | Alteryx Designer Core | HackerRank SQL.
             </div>
         </div>
 
         <!-- ATS OPTIMIZATION (HIDDEN / WHITE TEXT ALL OTHER SKILLS) -->
         <div class="ats-hidden">
-            Keywords: GCP, Google Cloud Platform, BigQuery, Snowflake, Azure Synapse, Databricks, Redshift, AWS, Python
-            (Pandas), PySpark, T-SQL, CI/CD, Jenkins, Git, Agile, SDLC, Fabric, Lakehouse.
+            Keywords: Microsoft Fabric, Lakehouse, OneLake, Data Activator, Synapse Data Science, Direct Lake, Parquet,
+            Delta Tables, GCP, BigQuery, Snowflake, Azure Synapse, AWS, Python (Pandas), PySpark, T-SQL, CI/CD, Git,
+            Agile, SDLC, DP-600.
         </div>
     </div>
 </body>
