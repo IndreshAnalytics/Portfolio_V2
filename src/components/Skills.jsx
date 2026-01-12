@@ -1,50 +1,51 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaChartBar, FaCogs, FaBriefcase } from 'react-icons/fa';
+import { FaChartBar, FaCogs, FaCloud } from 'react-icons/fa';
 
 const Skills = () => {
+    // Aligned with Resume Skills Section
     const technicalSkills = [
         {
-            category: "Phase 1: Fabric Architecture",
-            icon: <FaCogs />,
-            skills: [
-                { name: "Microsoft Fabric (OneLake)", level: 95, label: "Expert", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" },
-                { name: "Medallion Architecture", level: 90, label: "Architect", color: "linear-gradient(90deg, #64ffda 0%, #29b6f6 100%)" }
-            ]
-        },
-        {
-            category: "Phase 2: Data Engineering",
-            icon: <FaCogs />,
-            skills: [
-                { name: "SQL & Alteryx", level: 90, label: "Advanced", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" },
-                { name: "Semantic Models (DirectLake)", level: 85, label: "Specialist", color: "linear-gradient(90deg, #fcece4 0%, #e100ff 100%)" }
-            ]
-        },
-        {
-            category: "Phase 3: Automation & AI",
-            icon: <FaCogs />,
-            skills: [
-                { name: "Python (Pandas)", level: 80, label: "Proficient", color: "linear-gradient(90deg, #0aff9d 0%, #00e5ff 100%)" },
-                { name: "Copilot & AI Integration", level: 90, label: "Innovative", color: "linear-gradient(90deg, #0aff9d 0%, #00e5ff 100%)" }
-            ]
-        },
-        {
-            category: "Phase 4: Power BI Ecosystem",
+            category: "BI & Analysis",
             icon: <FaChartBar />,
             skills: [
-                { name: "Advanced DAX & Security", level: 95, label: "Expert", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" },
-                { name: "Governance & Administration", level: 85, label: "Admin", color: "linear-gradient(90deg, #ff8c00 0%, #ff0080 100%)" }
+                { name: "Power BI", level: 95, label: "Expert" },
+                { name: "DAX", level: 95, label: "Expert" },
+                { name: "Power Query", level: 90, label: "Advanced" },
+                { name: "Tableau", level: 80, label: "Proficient" },
+                { name: "Business Analysis", level: 90, label: "Advanced" },
+                { name: "Requirement Gathering", level: 95, label: "Expert" },
+                { name: "UAT", level: 90, label: "Advanced" }
+            ]
+        },
+        {
+            category: "Engineering",
+            icon: <FaCogs />,
+            skills: [
+                { name: "SQL Server", level: 90, label: "Advanced" },
+                { name: "Alteryx", level: 85, label: "Proficient" },
+                { name: "Python", level: 75, label: "Use-case" },
+                { name: "Data Modeling (Star Schema)", level: 95, label: "Expert" },
+                { name: "ETL Automation", level: 85, label: "Advanced" }
+            ]
+        },
+        {
+            category: "Cloud/AI",
+            icon: <FaCloud />,
+            skills: [
+                { name: "Azure", level: 80, label: "Proficient" },
+                { name: "Jira / Git", level: 85, label: "Advanced" },
+                { name: "Figma", level: 70, label: "Intermediate" },
+                { name: "ChatGPT / Copilot", level: 90, label: "Advanced" }
             ]
         }
     ];
 
-    // Business Skills array removed to focus on technical workflow per request
-
     return (
         <section id="skills" className="section">
             <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-                <h2 className="section-title" style={{ marginBottom: '10px' }}>End-to-End Development Workflow</h2>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem' }}>From data extraction to executive strategy.</p>
+                <h2 className="section-title" style={{ marginBottom: '10px' }}>Technical Skills</h2>
+                <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem' }}>Core Competencies & Technology Stack</p>
             </div>
 
             <div style={{
@@ -52,7 +53,6 @@ const Skills = () => {
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 gap: '30px'
             }}>
-                {/* Technical Skills Columns */}
                 {technicalSkills.map((section, index) => (
                     <motion.div
                         key={index}
@@ -68,7 +68,7 @@ const Skills = () => {
                             <h3 style={{ margin: 0 }}>{section.category}</h3>
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                             {section.skills.map((skill, i) => (
                                 <div key={i}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '0.95rem' }}>
@@ -76,16 +76,16 @@ const Skills = () => {
                                         <span style={{ color: 'var(--primary-glow)', fontSize: '0.85rem' }}>{skill.label}</span>
                                     </div>
                                     <div style={{
-                                        height: '8px',
+                                        height: '6px',
                                         background: 'rgba(255,255,255,0.1)',
-                                        borderRadius: '4px',
+                                        borderRadius: '3px',
                                         overflow: 'hidden'
                                     }}>
                                         <motion.div
                                             style={{
                                                 height: '100%',
-                                                background: skill.color || 'var(--primary-glow)',
-                                                borderRadius: '4px',
+                                                background: 'var(--primary-glow)',
+                                                borderRadius: '3px',
                                                 width: 0
                                             }}
                                             whileInView={{ width: `${skill.level}%` }}
@@ -98,8 +98,6 @@ const Skills = () => {
                         </div>
                     </motion.div>
                 ))}
-
-                {/* Business Skills Column Removed */}
             </div>
         </section>
     );

@@ -17,7 +17,7 @@ const Hero = () => {
 
                     {/* Job Title - Moved Below Name */}
                     <span className="highlight-text hero-title">
-                        SENIOR ANALYTICS ENGINEER | EXPERT POWER BI DEVELOPER
+                        SENIOR POWER BI DEVELOPER / BUSINESS ANALYST
                     </span>
 
                     <motion.p

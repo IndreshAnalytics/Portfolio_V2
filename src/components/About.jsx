@@ -20,12 +20,8 @@ const About = () => {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <p style={{ fontSize: '1.1rem' }}>
-                        I am a <strong>Senior Analytics Engineer</strong> and <strong>Expert Power BI Developer</strong> with 4.5+ years of experience specializing in End-to-End Development.
-                        <br /><br />
-                        My expertise lies in bridging the gap between complex data environments and executive-level insights, with a focus on <strong>Microsoft Fabric ecosystems</strong> for high-performance reporting.
-                        <br /><br />
-                        Currently at <strong>Quauto Technologies</strong>, I develop enterprise-grade Power BI solutions using <strong>OneLake and Medallion Architecture</strong> to streamline the analytics lifecycle.
+                    <p style={{ fontSize: '1.1rem', textAlign: 'justify' }}>
+                        Results-driven <strong>Senior Power BI Developer</strong> and <strong>Business Analyst</strong> specializing in End-to-End BI Solution Architecture. Expert in managing the full data lifecycle—from gathering raw business requirements to deploying scalable Power BI datasets. Proven track record of orchestrating complex ETL pipelines using <strong>SQL and Alteryx</strong>, reducing reporting latency by 40%, and leading successful UAT phases for global enterprise stakeholders.
                     </p>
                 </motion.div>
             </div>

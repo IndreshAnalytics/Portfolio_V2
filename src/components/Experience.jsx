@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaBuilding, FaLayerGroup, FaArrowRight } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaBuilding } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
-    // Strategic Domains
+    // Strategic Domains - kept as it adds nice flavor
     const strategicDomains = [
         "Banking",
         "E-commerce",
@@ -13,51 +13,45 @@ const Experience = () => {
 
     const experiences = [
         {
-            company: "Quauto Technologies Pvt Ltd",
-            role: "Senior Analytics Engineer",
+            company: "Quauto Technologies",
+            role: "Senior Power BI Developer / Business Analyst",
             duration: "Aug 2023 - Present",
             description: (
-                <>
-                    <div style={{ marginBottom: '15px' }}>
-                        Specializing in <strong>End-to-End Power BI Development</strong> and <strong>Microsoft Fabric</strong>.
-                        Delivered high-impact executive dashboards and upgraded workflow to <span className="tech-keyword">Medallion Architecture</span>.
-                    </div>
-
-                    <div className="workflow-section">
-                        <div className="workflow-title">Fabric Engineering Workflow</div>
-                        <div className="workflow-steps">
-                            <span>SQL & Alteryx (Ingestion)</span>
-                            <FaArrowRight className="workflow-arrow" />
-                            <span className="tech-keyword">Microsoft Fabric (OneLake)</span>
-                            <FaArrowRight className="workflow-arrow" />
-                            <span>Power BI (Executive Intelligence)</span>
-                        </div>
-                    </div>
-                </>
+                <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                    <li style={{ marginBottom: '8px' }}><strong>Requirement Gathering & Analysis:</strong> Executed the initial discovery phase, collaborating directly with clients to translate vague business goals into precise technical specifications and KPI definitions.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support high-performance reporting on large-scale enterprise datasets.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>ETL Orchestration:</strong> Built and maintained robust backend data pipelines using <strong>MS SQL and Alteryx</strong>, automating the extraction, transformation, and loading of data from disparate sources.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Advanced Development:</strong> Developed 10+ interactive dashboards using complex <strong>DAX measures</strong>, Calculation Groups, and Row-Level Security (RLS) to ensure data granularity and security.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Performance Optimization:</strong> Optimized SQL queries and Power BI dataset refresh schedules, successfully reducing report latency by 40% and improving render times.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>UAT & Deployment:</strong> Managed the End-to-End <strong>User Acceptance Testing (UAT)</strong> lifecycle, iterating on dashboard features based on stakeholder feedback before final production deployment.</li>
+                </ul>
             ),
-            location: "Pune, India"
+            location: "Remote"
         },
         {
             company: "Capgemini",
-            role: "Sr. Analyst/Software Engineer",
+            role: "Sr. Analyst / Software Engineer",
             duration: "Jan 2023 - Aug 2023",
             description: (
-                <>
-                    Executed cloud migration strategies for <span className="tech-keyword">Enterprise Solutions</span> providers.
-                    Migrated legacy reporting systems to modern BI architectures, standardizing global data protocols for high-volume transactional databases.
-                </>
+                <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                    <li style={{ marginBottom: '8px' }}><strong>Legacy Migration:</strong> Executed the technical transition of legacy reporting systems to modern <strong>Cloud-based BI architectures</strong> using SQL and Power BI, ensuring zero downtime.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Data Standardization:</strong> Implemented standard global data protocols for high-volume transactional databases using <strong>Advanced SQL</strong>, ensuring consistency across regional reporting units.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to <strong>Azure Cloud</strong>, creating scalable data pipelines that support enterprise-level reporting.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering teams and non-technical business units to ensure alignment on data definitions.</li>
+                </ul>
             ),
             location: "Pune, India"
         },
         {
             company: "Capgemini",
-            role: "Analyst/Software Engineer",
+            role: "Analyst / Software Engineer",
             duration: "Jun 2021 - Dec 2022",
             description: (
-                <>
-                    Engineered robust SQL-based data governance workflows for <span className="tech-keyword">Enterprise Data Environments</span>.
-                    Eliminated manual redundancy by automating the extraction and validation of sensitive high-volume transactional data.
-                </>
+                <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                    <li style={{ marginBottom: '8px' }}><strong>Data Governance:</strong> Engineered <strong>SQL-based data governance workflows</strong> that eliminated manual redundancy and improved overall data integrity by 30%.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Compliance Automation:</strong> Automated the extraction and validation of sensitive user transactional data using <strong>SQL Scripts</strong>, ensuring compliance with strict data protection standards.</li>
+                    <li style={{ marginBottom: '8px' }}><strong>Operational Reporting:</strong> Developed and maintained 6-7 critical operational dashboards using <strong>Power BI</strong>, tracking key performance indicators (KPIs) for internal efficiency.</li>
+                </ul>
             ),
             location: "Pune, India"
         }
@@ -65,13 +59,6 @@ const Experience = () => {
 
     return (
         <section id="experience" className="experience-section">
-            {/* Background Spheres */}
-            <div className="spheres-container">
-                <div className="floating-sphere" style={{ width: '300px', height: '300px', top: '-50px', left: '-50px', animationDuration: '25s' }}></div>
-                <div className="floating-sphere" style={{ width: '200px', height: '200px', bottom: '10%', right: '-50px', listStyle: 'none', background: 'radial-gradient(circle at 30% 30%, rgba(100, 255, 218, 0.05), rgba(100, 255, 218, 0.01))', animationDuration: '18s', animationDelay: '-5s' }}></div>
-                <div className="floating-sphere" style={{ width: '100px', height: '100px', top: '40%', right: '20%', animationDuration: '30s', animationDelay: '-10s' }}></div>
-            </div>
-
             <div className="glass-resume-container">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
