@@ -58,24 +58,36 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 5px;
-            /* Tight gap to keep on fewer lines */
+            gap: 8px;
+            /* Slightly increased gap for icons */
             align-items: center;
         }
 
         .contact-item {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             white-space: nowrap;
         }
 
         .contact-item a {
             color: #444;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
 
         .contact-item a:hover {
             color: #2E74B5;
             text-decoration: underline;
+        }
+
+        /* Icons */
+        .icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+            fill: #2E74B5;
+            vertical-align: text-bottom;
         }
 
         /* Sections */
@@ -184,6 +196,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .download-btn:hover {
@@ -213,12 +228,22 @@
             .download-btn {
                 display: none;
             }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
         }
     </style>
 </head>
 
 <body>
-    <button class="download-btn" onclick="window.print()">Download PDF</button>
+    <button class="download-btn" onclick="window.print()">
+        <svg class="icon" style="fill:white; width: 16px; height: 16px; margin:0;" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+        </svg>
+        Download PDF
+    </button>
 
     <div class="container">
         <!-- Header -->
@@ -226,13 +251,49 @@
             <div class="name">INDRESH TIWARI</div>
             <div class="title">Senior Power BI Developer / Business Analyst</div>
             <div class="contact-info">
-                <span class="contact-item"><a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a></span> |
-                <span class="contact-item"><a href="tel:+919926001335">+91-9926001335</a></span> |
-                <span class="contact-item">Pune, India</span> |
-                <span class="contact-item"><a href="https://linkedin.com/in/indreshtiwari"
-                        target="_blank">LinkedIn</a></span> |
-                <span class="contact-item"><a href="https://indreshanalytics.github.io/Portfolio_V2/"
-                        target="_blank">Portfolio</a></span>
+                <span class="contact-item">
+                    <a href="mailto:indreshtiwa@gmail.com">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        indreshtiwa@gmail.com
+                    </a>
+                </span> |
+                <span class="contact-item">
+                    <a href="tel:+919926001335">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 1.23 1.12 1.43 2.33 1.8 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        +91-9926001335
+                    </a>
+                </span> |
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    Pune, India
+                </span> |
+                <span class="contact-item">
+                    <a href="https://linkedin.com/in/indreshtiwari" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </span> |
+                <span class="contact-item">
+                    <a href="https://indreshanalytics.github.io/Portfolio_V2/" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        Portfolio
+                    </a>
+                </span>
             </div>
         </div>
 
@@ -275,8 +336,8 @@
                 </div>
                 <ul>
                     <li><strong>Requirement Gathering & Analysis:</strong> Executed the initial discovery phase,
-                        collaborating directly with clients to translate vague business goals into precise
-                        technical specifications and KPI definitions.</li>
+                        collaborating directly with clients to translate vague business goals into precise technical
+                        specifications and KPI definitions.</li>
                     <li><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable
                         <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support
                         high-performance reporting on large-scale enterprise datasets.
@@ -313,8 +374,7 @@
                         across regional reporting units.</li>
                     <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
                         <strong>Azure Cloud</strong>, creating scalable data pipelines that support enterprise-level
-                        reporting.
-                    </li>
+                        reporting.</li>
                     <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
                         teams and non-technical business units to ensure alignment on data definitions.</li>
                 </ul>
