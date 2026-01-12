@@ -192,8 +192,9 @@
 
         @media print {
             @page {
-                size: A4;
-                margin: 0.5in;
+                margin: 0;
+                /* Eliminates browser default headers/footers */
+                size: auto;
             }
 
             body {
@@ -204,7 +205,8 @@
             .container {
                 width: 100%;
                 margin: 0;
-                padding: 0;
+                padding: 0.5in;
+                /* Re-adds the visual margin internally */
                 box-shadow: none;
             }
 
