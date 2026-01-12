@@ -12,8 +12,10 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #222;
-            line-height: 1.35;
-            font-size: 10.5pt;
+            line-height: 1.3;
+            /* Tightened from 1.35 */
+            font-size: 10.2pt;
+            /* Slightly reduced for strict fit */
         }
 
         .container {
@@ -22,7 +24,6 @@
             margin: 20px auto;
             background-color: #fff;
             padding: 0.5in;
-            /* Narrow Margins for 1-page fit */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
             position: relative;
@@ -32,8 +33,10 @@
         .header {
             text-align: center;
             border-bottom: 2px solid #2E74B5;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            padding-bottom: 4px;
+            /* Reduced */
+            margin-bottom: 8px;
+            /* Reduced */
         }
 
         .name {
@@ -46,10 +49,11 @@
         }
 
         .title {
-            font-size: 12pt;
+            font-size: 11.5pt;
+            /* Harmonized */
             color: #2E74B5;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .contact-info {
@@ -59,7 +63,6 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 8px;
-            /* Slightly increased gap for icons */
             align-items: center;
         }
 
@@ -97,18 +100,21 @@
             font-weight: bold;
             text-transform: uppercase;
             border-bottom: 1px solid #ddd;
-            margin-top: 10px;
-            margin-bottom: 5px;
+            margin-top: 8px;
+            /* Reduced */
+            margin-bottom: 4px;
+            /* Reduced */
             padding-bottom: 2px;
         }
 
         .section-content {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            /* Reduced */
         }
 
         .summary {
             text-align: justify;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         /* Skills */
@@ -126,14 +132,15 @@
 
         /* Experience */
         .job-block {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            /* Reduced from 10px */
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 10.5pt;
+            font-size: 10.2pt;
             margin-bottom: 2px;
         }
 
@@ -147,24 +154,26 @@
         }
 
         .date-location {
-            font-size: 10pt;
+            font-size: 9.5pt;
             color: #666;
             font-style: italic;
         }
 
         ul {
-            margin: 2px 0 0 16px;
+            margin: 0 0 0 16px;
+            /* Removed top margin */
             padding: 0;
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+            /* Tighter bullets */
             text-align: justify;
         }
 
         /* Education & Certs merged */
         .edu-cert-block {
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         /* ATS Hidden */
@@ -374,7 +383,8 @@
                         across regional reporting units.</li>
                     <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
                         <strong>Azure Cloud</strong>, creating scalable data pipelines that support enterprise-level
-                        reporting.</li>
+                        reporting.
+                    </li>
                     <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
                         teams and non-technical business units to ensure alignment on data definitions.</li>
                 </ul>
