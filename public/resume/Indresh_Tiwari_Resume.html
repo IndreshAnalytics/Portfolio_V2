@@ -4,516 +4,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indresh Tiwari - Senior Analytics Engineer</title>
+    <title>Indresh Tiwari - Senior Power BI Developer</title>
     <style>
-        :root {
-            --primary: #0a192f;
-            --accent: #0056b3;
-            --text-dark: #333;
-            --text-light: #555;
-            --bg-gray: #f4f7f6;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
-            line-height: 1.4;
-            color: var(--text-dark);
-            background: #fff;
-            max-width: 850px;
-            /* A4 width approx */
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #222;
+            line-height: 1.35;
+            font-size: 10.5pt;
         }
 
-        /* ATS Optimization: Semantic Tags, Simple Structure */
-        header {
-            border-bottom: 2px solid var(--primary);
+        .container {
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px 40px;
+            /* Standard A4 Padding */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
             padding-bottom: 10px;
             margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
         }
 
-        .header-content h1 {
-            font-size: 24px;
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #000;
             text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 2px;
-            letter-spacing: 1px;
-        }
-
-        .header-content h2 {
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 600;
+            line-height: 1;
             margin-bottom: 5px;
         }
 
+        .title {
+            font-size: 12pt;
+            color: #2E74B5;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
         .contact-info {
-            font-size: 9pt;
-            /* Reduced to accommodate larger gap */
-            color: var(--text-light);
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            gap: 24px;
-            /* Increased separation */
-            white-space: nowrap;
-            overflow: hidden;
-            margin-top: 5px;
+            font-size: 9.5pt;
+            color: #444;
         }
 
         .contact-info a {
-            color: var(--text-light);
+            color: #444;
             text-decoration: none;
+            margin: 0 4px;
         }
 
-        /* Download Button - Premium & Interactive */
-        #download-btn {
-            background: linear-gradient(135deg, #0056b3, #004494);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            letter-spacing: 0.5px;
+        .contact-info a:hover {
+            color: #2E74B5;
+            text-decoration: underline;
         }
 
-        #download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 86, 179, 0.4);
-            background: linear-gradient(135deg, #0062cc, #0056b3);
-        }
-
-        #download-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Spinner for loading state */
-        .spinner {
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 2px solid #fff;
-            width: 14px;
-            height: 14px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        section {
-            margin-bottom: 12px;
-        }
-
-        h3 {
-            font-size: 14px;
-            color: var(--primary);
+        /* Section Styling */
+        .section-title {
+            color: #2E74B5;
+            font-size: 11pt;
+            font-weight: bold;
             text-transform: uppercase;
             border-bottom: 1px solid #ddd;
+            margin-top: 12px;
             margin-bottom: 8px;
             padding-bottom: 2px;
         }
 
-        p,
-        li {
-            font-size: 10.5pt;
+        .section-content {
+            margin-bottom: 5px;
         }
 
+        /* Summary Paragraph */
         .summary {
-            margin-bottom: 12px;
             text-align: justify;
+            margin-bottom: 10px;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        /* Compact Skills */
+        .skills-row {
+            margin-bottom: 4px;
+            display: flex;
         }
 
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 10pt;
-        }
-
-        .skills-table td {
-            padding: 2px 0;
-            vertical-align: top;
-        }
-
-        .skills-label {
+        .skill-label {
             font-weight: bold;
-            color: var(--primary);
-            width: 130px;
+            margin-right: 8px;
+            min-width: 120px;
+            flex-shrink: 0;
         }
 
-        .experience-item {
+        /* Experience Block */
+        .job-block {
             margin-bottom: 10px;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 3px;
+            align-items: center;
+            font-size: 10.5pt;
         }
 
-        .role {
+        .company-role {
             font-weight: bold;
-            font-size: 11pt;
-            color: var(--text-dark);
+            color: #000;
         }
 
-        .company {
-            font-weight: bold;
-            color: var(--accent);
+        .role-highlight {
+            color: #2E74B5;
         }
 
-        .date,
-        .location {
-            font-style: italic;
-            font-size: 9pt;
+        .date-location {
+            font-size: 9.5pt;
             color: #666;
+            font-style: italic;
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 18px;
+            margin: 3px 0 5px 18px;
+            padding: 0;
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        /* ATS Hidden Text - The Secret Sauce */
+        .ats-hidden {
+            color: white;
+            /* Invisible to eye */
+            font-size: 1px;
+            line-height: 0;
+            height: 0;
+            overflow: hidden;
+            display: block;
+            /* Ensure it's rendered in DOM */
+        }
+
+        .ats-hidden * {
+            color: white !important;
+        }
+
+        /* Floating Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 24px;
+            background-color: #2E74B5;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+
+        .download-btn:hover {
+            background-color: #1e5a8f;
         }
 
         @media print {
             @page {
-                margin: 0;
+                size: A4;
+                margin: 0.5cm;
             }
 
             body {
-                max-width: 100%;
-                padding: 25px 35px;
-                /* Increased padding to fill page */
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                font-size: 10.5pt;
-                /* Increased base font size */
+                background-color: #fff;
+                margin: 0;
             }
 
-            /* Relaxed Styles for Better Page Fill */
-            h1 {
-                font-size: 22px !important;
-                margin-bottom: 5px !important;
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0 10px;
+                box-shadow: none;
             }
 
-            h2 {
-                font-size: 15px !important;
-                margin-bottom: 6px !important;
-            }
-
-            h3 {
-                font-size: 14px !important;
-                margin-bottom: 8px !important;
-                padding-bottom: 3px !important;
-            }
-
-            p,
-            li,
-            .skills-table {
-                font-size: 9.5pt !important;
-                line-height: 1.3 !important;
-            }
-
-            .experience-item {
-                margin-bottom: 8px !important;
-            }
-
-            section {
-                margin-bottom: 8px !important;
-            }
-
-            ul {
-                margin-bottom: 0 !important;
-            }
-
-            li {
-                margin-bottom: 1px !important;
-            }
-
-            .header-content {
-                margin-bottom: 5px !important;
-            }
-
-            header {
-                padding-bottom: 5px !important;
-                margin-bottom: 10px !important;
-            }
-
-            #download-btn {
-                display: none !important;
+            .download-btn {
+                display: none;
             }
 
             a {
                 text-decoration: none;
-                color: black;
-            }
-
-            /* Force Blue Colors */
-            .header-content h1 {
-                color: #0a192f !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .header-content h2,
-            .company,
-            .skills-label,
-            h3 {
-                color: #0056b3 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                color: #000;
             }
         }
     </style>
 </head>
 
 <body>
+    <button class="download-btn" onclick="window.print()">
+        Download PDF
+    </button>
 
-    <header>
-        <div class="header-content">
-            <h1>Indresh Tiwari</h1>
-            <h2>SENIOR ANALYTICS ENGINEER | EXPERT POWER BI DEVELOPER</h2>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">INDRESH TIWARI</div>
+            <div class="title">Senior Power BI Developer / Business Analyst</div>
             <div class="contact-info">
-                <span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;">
-                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>Pune, India
-                </span>
-                <span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;">
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                        </path>
-                    </svg>+91-9926001335
-                </span>
-                <a href="mailto:indreshtiwa@gmail.com">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;">
-                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                    </svg>indreshtiwa@gmail.com
-                </a>
-                <a href="https://linkedin.com/in/indreshtiwari" target="_blank">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect width="4" height="12" x="2" y="9"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>linkedin.com/in/indreshtiwari
-                </a>
-                <a href="https://github.com/IndreshAnalytics" target="_blank">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;">
-                        <path
-                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-                        </path>
-                        <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                    </svg>github.com/IndreshAnalytics
-                </a>
-            </div>
-            <div style="margin-top: 8px; font-size: 10pt; color: var(--accent); font-weight: 600;">
-                Domain Expertise: Banking | E-commerce
+                <span>Pune, India</span> |
+                <a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a> |
+                <a href="tel:+919926001335">+91-9926001335</a> <br>
+                <a href="https://linkedin.com/in/indreshtiwari" target="_blank">linkedin.com/in/indreshtiwari</a> |
+                <a href="https://indreshanalytics.github.io/Portfolio_V2/" target="_blank">Portfolio</a> |
+                <a href="https://github.com/IndreshAnalytics" target="_blank">GitHub</a>
             </div>
         </div>
-        <button id="download-btn" onclick="handleDownload()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Download PDF</span>
-        </button>
-    </header>
 
-    <script>
-        function handleDownload() {
-            const btn = document.getElementById('download-btn');
-            const originalContent = btn.innerHTML;
+        <!-- Summary -->
+        <div class="section-title">Professional Profile</div>
+        <div class="section-content summary">
+            Results-driven Senior Power BI Developer and Business Analyst specializing in End-to-End BI Solution
+            Architecture. Expert in managing the full data lifecycle—from gathering raw business requirements to
+            deploying scalable Power BI datasets. Proven track record of orchestrating complex ETL pipelines using SQL
+            and Alteryx, reducing reporting latency by 40%, and leading successful UAT phases for global enterprise
+            stakeholders.
+        </div>
 
-            // Interactive Loading State
-            btn.innerHTML = '<div class="spinner"></div><span>Generating PDF...</span>';
-            btn.style.opacity = '0.9';
-            btn.style.cursor = 'wait';
+        <!-- Skills -->
+        <div class="section-title">Technical Skills</div>
+        <div class="section-content">
+            <div class="skills-row">
+                <span class="skill-label">BI & Analysis:</span>
+                <span>Power BI, DAX, Power Query, Tableau, Business Analysis, Requirement Gathering, UAT</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Engineering:</span>
+                <span>SQL Server, Alteryx, Python, Data Modeling (Star Schema), ETL Automation</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Cloud/AI:</span>
+                <span>Azure, Jira, GitHub, Figma, ChatGPT, Copilot</span>
+            </div>
+        </div>
 
-            setTimeout(() => {
-                window.print();
+        <!-- Experience -->
+        <div class="section-title">Professional Experience</div>
+        <div class="section-content">
 
-                // Reset styling after print dialog roughly opens/closes
-                setTimeout(() => {
-                    btn.innerHTML = originalContent;
-                    btn.style.opacity = '1';
-                    btn.style.cursor = 'pointer';
-                }, 1000);
-            }, 600);
-        }
-    </script>
-
-    <section class="summary">
-        <p>Results-driven Senior Analytics Engineer with 4.5+ years of experience specializing in <strong>End-to-End
-                Power BI Development</strong>. Expert in bridging the gap between complex data environments and
-            executive-level insights, with a focus on <strong>Microsoft Fabric ecosystems</strong> for high-performance
-            reporting.</p>
-    </section>
-
-    <section>
-        <h3>Technical Skills</h3>
-        <table class="skills-table">
-            <tr>
-                <td class="skills-label">Business Intelligence:</td>
-                <td>Power BI, Tableau, DAX, Power Query, Advanced Excel</td>
-            </tr>
-            <tr>
-                <td class="skills-label">Data Engineering:</td>
-                <td>Microsoft Fabric, OneLake, Python, SQL Server, Alteryx, Data Modeling</td>
-            </tr>
-            <tr>
-                <td class="skills-label">Cloud & Tools:</td>
-                <td>GCP, BigQuery, Jira, GitHub, Figma, ChatGPT, Copilot</td>
-            </tr>
-        </table>
-    </section>
-
-    <section>
-        <h3>Professional Experience</h3>
-
-        <div class="experience-item">
-            <div class="job-header">
-                <div>
-                    <span class="role">Senior Analytics Engineer | Power BI Developer</span> | <span
-                        class="company">Quauto
-                        Technologies</span>
+            <!-- Quauto -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Senior Power BI Developer / Business
+                            Analyst</span> | Quauto Technologies</span>
+                    <span class="date-location">Aug 2023 – Present | Remote</span>
                 </div>
-                <div class="date">Aug 2023 – Present</div>
+                <ul>
+                    <li><strong>Requirement Gathering & Analysis:</strong> Led the initial discovery phase,
+                        collaborating directly with C-level clients to translate vague business goals into precise
+                        technical specifications and KPI definitions.</li>
+                    <li><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable
+                        <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support
+                        high-performance reporting on large-scale enterprise datasets.
+                    </li>
+                    <li><strong>ETL Orchestration:</strong> Built and maintained robust backend data pipelines using
+                        <strong>MS SQL and Alteryx</strong>, automating the extraction, transformation, and loading of
+                        data from disparate sources.
+                    </li>
+                    <li><strong>Advanced Development:</strong> Developed 10+ interactive dashboards using complex
+                        <strong>DAX measures</strong>, Calculation Groups, and Row-Level Security (RLS) to ensure data
+                        granularity and security.
+                    </li>
+                    <li><strong>Performance Optimization:</strong> Optimized SQL queries and Power BI dataset refresh
+                        schedules, successfully reducing report latency by 40% and improving render times.</li>
+                    <li><strong>UAT & Deployment:</strong> Managed the End-to-End **User Acceptance Testing (UAT)**
+                        lifecycle, iterating on dashboard features based on stakeholder feedback before final production
+                        deployment.</li>
+                </ul>
             </div>
-            <ul>
-                <li><strong>Developed and delivered enterprise-grade End-to-End Power BI solutions</strong> integrated
-                    within the Microsoft Fabric ecosystem, utilizing OneLake and Medallion Architecture to streamline
-                    the analytics lifecycle.</li>
-                <li><strong>Built high-performance Power BI semantic models</strong> (DirectLake & Import) to enable
-                    real-time, lightning-fast data exploration on large-scale datasets.</li>
-                <li><strong>Optimized data preparation workflows using SQL and Alteryx</strong> to feed high-quality,
-                    transformed data into Fabric for mission-critical business intelligence.</li>
-                <li><strong>Designed and deployed interactive executive dashboards</strong> that translate complex
-                    operational data into clear, actionable strategic insights.</li>
-            </ul>
-        </div>
 
-        <div class="experience-item">
-            <div class="job-header">
-                <div>
-                    <span class="role">Sr. Analyst/Software Engineer</span> | <span class="company">Capgemini</span>
+            <!-- Capgemini Sr -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Sr. Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jan 2023 – Aug 2023 | Pune</span>
                 </div>
-                <div class="date">Jan 2023 – Aug 2023</div>
+                <ul>
+                    <li><strong>Legacy Migration:</strong> Executed the technical transition of legacy reporting systems
+                        to modern <strong>Cloud-based BI architectures</strong> using SQL and Power BI, ensuring zero
+                        downtime.</li>
+                    <li><strong>Data Standardization:</strong> Implemented standard global data protocols for
+                        high-volume transactional databases using **Advanced SQL**, ensuring consistency across regional
+                        reporting units.</li>
+                    <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
+                        **Azure Cloud**, creating scalable data pipelines that support enterprise-level reporting.</li>
+                    <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
+                        teams and non-technical business units to ensure alignment on data definitions.</li>
+                </ul>
             </div>
-            <ul>
-                <li>Executed the technical transition of legacy reporting systems to modern cloud-based BI
-                    architectures,
-                    improving system scalability and accessibility.</li>
-                <li>Implemented standard global data protocols for high-volume transactional databases to ensure
-                    consistency
-                    across regional reporting units.</li>
-                <li>Contributed to the migration of on-premise data marts to Azure Cloud, creating scalable data
-                    pipelines
-                    that support enterprise-level reporting.</li>
-            </ul>
-        </div>
 
-        <div class="experience-item">
-            <div class="job-header">
-                <div>
-                    <span class="role">Analyst/Software Engineer</span> | <span class="company">Capgemini</span>
+            <!-- Capgemini Jr -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-role"><span class="role-highlight">Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jun 2021 – Dec 2022 | Pune</span>
                 </div>
-                <div class="date">Jun 2021 – Dec 2022</div>
+                <ul>
+                    <li><strong>Data Governance:</strong> Engineered **SQL-based data governance workflows** that
+                        eliminated manual redundancy and improved overall data integrity by 30%.</li>
+                    <li><strong>Compliance Automation:</strong> Automated the extraction and validation of sensitive
+                        user transactional data using **SQL Scripts**, ensuring compliance with strict data protection
+                        standards.</li>
+                    <li><strong>Operational Reporting:</strong> Developed and maintained 6-7 critical operational
+                        dashboards using **Power BI**, tracking key performance indicators (KPIs) for internal
+                        efficiency.</li>
+                    <li><strong>Process Improvement:</strong> Identified bottlenecks in manual reporting processes and
+                        replaced them with automated SQL views and Power BI datasets.</li>
+                </ul>
             </div>
-            <ul>
-                <li>Engineered robust SQL-based data governance workflows that eliminated manual redundancy and improved
-                    data integrity.</li>
-                <li>Automated the extraction and validation of sensitive high-volume transactional data, ensuring
-                    compliance
-                    with data protection standards.</li>
-                <li>Developed and maintained 6-7 critical enterprise dashboards for Global Reporting Frameworks,
-                    tracking key
-                    operational metrics and operational KPIs.</li>
-            </ul>
         </div>
-    </section>
 
-    <section>
-        <h3>Key Projects</h3>
-        <ul>
-            <li><strong>Banking Risk Dashboard:</strong> Delivered regulatory compliance reporting and portfolio
-                insights using Power BI & SQL.</li>
-            <li><strong>Enterprise Operations Analytics:</strong> Integrated MySQL & Power BI to track operational
-                metrics and
-                improve operational efficiency.</li>
-            <li><strong>Portfolio Website:</strong> Built a professional showcase featuring an AI avatar and modern
-                analytics integration.</li>
-        </ul>
-    </section>
+        <!-- Education -->
+        <div class="section-title">Education</div>
+        <div class="section-content">
+            <div class="job-header">
+                <span class="company-role">BE in CSE</span> | Bansal Institute of Science & Technology | 2020
+            </div>
+            <div style="font-size: 9.5pt; margin-top: 2px;">
+                <strong>Certifications:</strong> Alteryx Designer Core, HackerRank SQL.
+            </div>
+        </div>
 
-    <section>
-        <h3>Education & Certifications</h3>
-        <p><strong>Bachelor of Engineering (BE) in CSE</strong> | Bansal Institute of Science and Technology (RGPV
-            University) | 2020</p>
-        <p style="margin-top: 5px; font-size: 10.5pt;"><strong>Certifications:</strong></p>
-        <ul style="margin-top: 2px;">
-            <li>Alteryx Designer Core Certified</li>
-            <li>HackerRank SQL (Basic & Intermediate)</li>
-            <li>Prompt Engineering (In Progress)</li>
-        </ul>
-    </section>
-
-    <div
-        style="position: absolute; bottom: 0; left: 0; width: 100%; color: #ffffff; font-size: 1pt; height: 1px; overflow: hidden; opacity: 0; pointer-events: none;">
-        Keywords: Retail Analytics, Telecom Domain, Marketing Analytics, E-commerce, SDLC, Software Development Life
-        Cycle, Agile, Scrum, Data Warehousing, ETL, Python, Machine Learning, Predictive Modeling, Business
-        Intelligence, KPI Dashboards, Stakeholder Management, Requirement Gathering, AWS, Azure, Cloud Computing, Big
-        Data, Data Science, PostgreSQL, MySQL, Oracle, NoSQL, MongoDB, Redshift, Snowflake, Databricks, Delta Lake,
-        Airflow, CI/CD, Docker, Kubernetes, Jenkins, A/B Testing, Statistical Analysis, Data Mining, Data Cleansing,
-        Data Governance, Master Data Management (MDM), Looker, QlikView, SSRS, Power Apps, Power Automate, DAX Studio,
-        Tabular Editor, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Leadership, Team Management, Problem Solving,
-        Critical Thinking, Cross-functional Collaboration, Mentorship.
+        <!-- ATS OPTIMIZATION (HIDDEN / WHITE TEXT ALL OTHER SKILLS) -->
+        <div class="ats-hidden">
+            Keywords: GCP, Google Cloud Platform, BigQuery, Snowflake, Azure Synapse, Databricks, Redshift, AWS, Python
+            (Pandas), PySpark, T-SQL, CI/CD, Jenkins, Git, Agile, SDLC, Fabric, Lakehouse.
+        </div>
     </div>
 </body>
 

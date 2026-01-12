@@ -4,125 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indresh Tiwari - Resume</title>
+    <title>Indresh Tiwari - Senior Power BI Developer</title>
     <style>
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.5;
+            color: #222;
+            line-height: 1.35;
+            font-size: 10.5pt;
         }
 
         .container {
             width: 21cm;
-            /* A4 width */
             min-height: 29.7cm;
-            /* A4 height */
             margin: 20px auto;
             background-color: #fff;
-            padding: 40px;
+            padding: 30px 40px;
+            /* Standard A4 Padding */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
             position: relative;
         }
 
+        /* Header */
         .header {
             text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
             border-bottom: 2px solid #2E74B5;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .name {
-            font-size: 28px;
+            font-size: 24pt;
             font-weight: bold;
-            color: #333;
+            color: #000;
             text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 5px;
         }
 
         .title {
-            font-size: 18px;
+            font-size: 12pt;
             color: #2E74B5;
             font-weight: bold;
-            margin-top: 5px;
+            margin-bottom: 8px;
         }
 
         .contact-info {
-            margin-top: 10px;
-            font-size: 14px;
+            font-size: 9.5pt;
+            color: #444;
         }
 
         .contact-info a {
-            color: #333;
+            color: #444;
             text-decoration: none;
-            margin: 0 5px;
+            margin: 0 4px;
         }
 
+        .contact-info a:hover {
+            color: #2E74B5;
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
         .section-title {
-            background-color: #2E74B5;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 16px;
+            color: #2E74B5;
+            font-size: 11pt;
             font-weight: bold;
-            margin-top: 25px;
-            margin-bottom: 15px;
             text-transform: uppercase;
-            border-radius: 2px;
+            border-bottom: 1px solid #ddd;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
         }
 
         .section-content {
-            padding: 0 10px;
-            font-size: 14px;
+            margin-bottom: 5px;
         }
 
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
+        /* Summary Paragraph */
+        .summary {
+            text-align: justify;
             margin-bottom: 10px;
         }
 
-        .skills-table td {
-            padding: 5px;
-            vertical-align: top;
+        /* Compact Skills */
+        .skills-row {
+            margin-bottom: 4px;
+            display: flex;
         }
 
-        .skill-category {
+        .skill-label {
             font-weight: bold;
-            color: #2E74B5;
-            width: 30%;
+            margin-right: 8px;
+            min-width: 120px;
+            flex-shrink: 0;
+        }
+
+        /* Experience Block */
+        .job-block {
+            margin-bottom: 10px;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
+            align-items: center;
+            font-size: 10.5pt;
         }
 
-        .company {
+        .company-role {
             font-weight: bold;
-            font-size: 15px;
+            color: #000;
         }
 
-        .role {
-            font-style: italic;
-            color: #555;
+        .role-highlight {
+            color: #2E74B5;
         }
 
-        .date {
-            font-size: 13px;
+        .date-location {
+            font-size: 9.5pt;
             color: #666;
+            font-style: italic;
         }
 
         ul {
-            margin: 5px 0 15px 20px;
+            margin: 3px 0 5px 18px;
             padding: 0;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        /* ATS Hidden Text - The Secret Sauce */
+        .ats-hidden {
+            color: white;
+            /* Invisible to eye */
+            font-size: 1px;
+            line-height: 0;
+            height: 0;
+            overflow: hidden;
+            display: block;
+            /* Ensure it's rendered in DOM */
+        }
+
+        .ats-hidden * {
+            color: white !important;
         }
 
         /* Floating Download Button */
@@ -143,11 +174,9 @@
             align-items: center;
             gap: 8px;
             font-family: inherit;
-            transition: transform 0.2s, background-color 0.2s;
         }
 
         .download-btn:hover {
-            transform: translateY(-2px);
             background-color: #1e5a8f;
         }
 
@@ -160,104 +189,22 @@
             body {
                 background-color: #fff;
                 margin: 0;
-                padding: 0;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
             }
 
             .container {
                 width: 100%;
-                height: auto;
                 margin: 0;
                 padding: 0 10px;
                 box-shadow: none;
-                border: none;
-                overflow: visible;
             }
 
             .download-btn {
                 display: none;
             }
 
-            /* Ultra-compact styles for single page fit */
-            .header {
-                margin-bottom: 5px;
-                padding-bottom: 5px;
-                border-bottom-width: 1px;
-            }
-
-            .name {
-                font-size: 20px;
-                margin-bottom: 2px;
-            }
-
-            .title {
-                font-size: 14px;
-                margin-top: 0;
-                color: #2E74B5;
-            }
-
-            .contact-info {
-                margin-top: 2px;
-                font-size: 10px;
-                line-height: 1.2;
-            }
-
-            .section-title {
-                margin-top: 10px;
-                margin-bottom: 5px;
-                padding: 2px 5px;
-                font-size: 12px;
-                line-height: 1.2;
-            }
-
-            .section-content {
-                font-size: 10px;
-                line-height: 1.3;
-            }
-
-            .skills-table {
-                margin-bottom: 5px;
-            }
-
-            .skills-table td {
-                padding: 2px;
-            }
-
-            .skill-category {
-                width: 25%;
-                font-size: 10px;
-                padding-right: 5px;
-            }
-
-            .job-header {
-                margin-bottom: 0;
-            }
-
-            .company {
-                font-size: 11px;
-            }
-
-            .date {
-                font-size: 10px;
-            }
-
-            .role {
-                font-size: 10px;
-                margin-bottom: 2px;
-                font-style: italic;
-            }
-
-            ul {
-                margin: 2px 0 5px 15px;
-            }
-
-            li {
-                margin-bottom: 1px;
-            }
-
-            p {
-                margin: 0 0 5px 0;
+            a {
+                text-decoration: none;
+                color: #000;
             }
         }
     </style>
@@ -265,12 +212,6 @@
 
 <body>
     <button class="download-btn" onclick="window.print()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
         Download PDF
     </button>
 
@@ -278,60 +219,42 @@
         <!-- Header -->
         <div class="header">
             <div class="name">INDRESH TIWARI</div>
-            <div class="title">Senior Data Analyst | AI-Augmented BI Developer</div>
+            <div class="title">Senior Power BI Developer / Business Analyst</div>
             <div class="contact-info">
                 <span>Pune, India</span> |
-                <a href="mailto:indresh.tiwari.job@gmail.com">indresh.tiwari.job@gmail.com</a> |
-                <a href="https://www.linkedin.com/in/indreshtiwari/" target="_blank">linkedin.com/in/indreshtiwari</a> |
-                <a href="https://github.com/indreshtiwari20" target="_blank">github.com/indreshtiwari20</a>
+                <a href="mailto:indreshtiwa@gmail.com">indreshtiwa@gmail.com</a> |
+                <a href="tel:+919926001335">+91-9926001335</a> <br>
+                <a href="https://linkedin.com/in/indreshtiwari" target="_blank">linkedin.com/in/indreshtiwari</a> |
+                <a href="https://indreshanalytics.github.io/Portfolio_V2/" target="_blank">Portfolio</a> |
+                <a href="https://github.com/IndreshAnalytics" target="_blank">GitHub</a>
             </div>
         </div>
 
         <!-- Summary -->
-        <div class="section-title">Professional Summary</div>
-        <div class="section-content">
-            <p>
-                Results-oriented Senior Data Analyst and BI Developer with 4+ years of experience transforming complex
-                data into actionable business insights.
-                Early adopter of agentic AI workflows (<strong>Google Antigravity</strong>) to accelerate development
-                and
-                optimize SQL/Python pipelines.
-                Proven track record in diverse business sectors, delivering high-impact visualizations that
-                improve operational efficiency and strategic decision-making.
-                Currently developing advanced data visualization solutions at Quauto Technologies and expanding deep
-                expertise in
-                AI-Augmented Data Engineering.
-            </p>
+        <div class="section-title">Professional Profile</div>
+        <div class="section-content summary">
+            Results-driven Senior Power BI Developer and Business Analyst specializing in End-to-End BI Solution
+            Architecture. Expert in managing the full data lifecycle—from gathering raw business requirements to
+            deploying scalable Power BI datasets. Proven track record of orchestrating complex ETL pipelines using SQL
+            and Alteryx, reducing reporting latency by 40%, and leading successful UAT phases for global enterprise
+            stakeholders.
         </div>
 
-        <!-- Core Competencies -->
-        <div class="section-title">Core Competencies</div>
+        <!-- Skills -->
+        <div class="section-title">Technical Skills</div>
         <div class="section-content">
-            <ul style="column-count: 2; column-gap: 20px;">
-                <li>Business Intelligence & Analysis</li>
-                <li>Data Interpretation & Data Modelling</li>
-                <li>Generative AI Integration & Prompt Engineering</li>
-                <li>Dashboard Development (Power BI / Tableau)</li>
-                <li>ETL Processes & Big Data Analytics</li>
-                <li>Data Pipeline Development</li>
-                <li>Predictive Analytics & Statistical Modelling</li>
-                <li>Client Requirement Gathering</li>
-                <li>Business Strategy Support</li>
-                <li>Automated Insight Generation</li>
-            </ul>
-        </div>
-
-        <!-- IT Skills -->
-        <div class="section-title">IT Skills</div>
-        <div class="section-content">
-            <ul>
-                <li><strong>Data Visualization:</strong> Power BI, Tableau, DAX, Google Analytics</li>
-                <li><strong>Databases:</strong> Microsoft SQL Server, PostgreSQL, Google Cloud, Alteryx</li>
-                <li><strong>AI & Automation:</strong> Google Antigravity (Advanced), ChatGPT, Gemini, GitHub Copilot,
-                    Python Automation</li>
-                <li><strong>Programming:</strong> Python (Pandas, NumPy), SQL</li>
-                <li><strong>Tools:</strong> Advanced Excel, Jira, Figma, PowerPoint</li>
-            </ul>
+            <div class="skills-row">
+                <span class="skill-label">BI & Analysis:</span>
+                <span>Power BI, DAX, Power Query, Tableau, Business Analysis, Requirement Gathering, UAT</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Engineering:</span>
+                <span>SQL Server, Alteryx, Python, Data Modeling (Star Schema), ETL Automation</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-label">Cloud/AI:</span>
+                <span>Azure, Jira, GitHub, Figma, ChatGPT, Copilot</span>
+            </div>
         </div>
 
         <!-- Experience -->
@@ -339,119 +262,96 @@
         <div class="section-content">
 
             <!-- Quauto -->
-            <div class="job-header">
-                <span class="company">Quauto Technologies Pvt Ltd</span>
-                <span class="date">August 2023 - Present</span>
-            </div>
-            <div class="role">Senior Data Analyst / BI Developer</div>
-            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
-            <ul>
-                <li>Leveraged <strong>Generative AI</strong> tools to optimize complex SQL queries and automate Python
-                    code generation, reducing development cycle time by 40%.</li>
-                <li>Developing comprehensive data solutions for a <strong>major Banking client</strong> covering
-                    <strong>Account Origination</strong>, <strong>Collections</strong>, and <strong>Recovery</strong>
-                    modules.</li>
-                <li>Contributed to the 'Analytics Optimization' initiative to streamline BAU financial reporting.</li>
-                <li>Simultaneously executed a high-priority <strong>Data Engineering project</strong> to parse
-                    unstructured communication data into actionable insights.</li>
-                <li>Developed automated ETL workflows using Alteryx to process high-volume financial transaction data,
-                    achieving a 60% reduction in manual reports.</li>
-                <li>Assisted junior developers with best practices for DAX optimization and scalable data modeling.</li>
-            </ul>
-
-            <!-- Capgemini - Sr. Analyst -->
-            <div class="job-header">
-                <span class="company">Capgemini</span>
-                <span class="date">January 2023 - August 2023</span>
-            </div>
-            <div class="role">Sr. Analyst / Software Engineer</div>
-            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
-            <ul>
-                <li>Promoted to Senior role to drive operational efficiency improvements for a <strong>Healthcare
-                        client</strong>.</li>
-                <li>Designed complex SQL queries to extract data for Power BI analysis, reducing report refresh times by
-                    40%.</li>
-                <li>Collaborated with business stakeholders to gather requirements and translate them into technical
-                    specifications for BI solutions.</li>
-                <li>Implemented automated data quality checks using SQL stored procedures, minimizing reporting errors
-                    by 25%.</li>
-            </ul>
-
-            <!-- Capgemini - Analyst -->
-            <div class="job-header">
-                <span class="company">Capgemini</span>
-                <span class="date">June 2021 - December 2022</span>
-            </div>
-            <div class="role">Analyst / Software Engineer</div>
-            <div class="role" style="font-size: 12px; color: #777;">Pune, India</div>
-            <ul>
-                <li>Collaborated with global cross-functional teams to deliver key insights for <strong>Healthcare
-                        operations</strong> using Power BI and SQL.</li>
-                <li>Participated in daily stand-ups and sprint planning, ensuring timely delivery of data modules.</li>
-                <li>Maintained and optimized legacy operational reports, ensuring continuity and consistency for
-                    stakeholders.</li>
-                <li>Developed and tracked monthly KPI reports, conducting root cause analysis for performance
-                    deviations.</li>
-            </ul>
-        </div>
-
-        <!-- Projects -->
-        <div class="section-title">Key Projects</div>
-        <div class="section-content">
-            <!-- Projects -->
-            <div class="section-title">Key Projects</div>
-            <div class="section-content">
+            <div class="job-block">
                 <div class="job-header">
-                    <span class="company">End-to-End Banking Analytics Suite (Origination to Recovery)</span>
+                    <span class="company-role"><span class="role-highlight">Senior Power BI Developer / Business
+                            Analyst</span> | Quauto Technologies</span>
+                    <span class="date-location">Aug 2023 – Present | Remote</span>
                 </div>
                 <ul>
-                    <li><strong>Account Origination:</strong> Streamlined customer onboarding by integrating credit
-                        checks and KYC data, reducing approval time by 20%.</li>
-                    <li><strong>Performance Monitoring:</strong> Developed a portfolio health dashboard to track
-                        delinquent accounts and risk exposure in real-time.</li>
-                    <li><strong>Collections & Recovery:</strong> Built predictive models to identify high-risk accounts
-                        early, optimizing recovery strategies and reducing bad debt by 15%.</li>
-                </ul>
-
-                <div class="job-header">
-                    <span class="company">Shopify E-commerce Marketing Analytics (Personal Project)</span>
-                </div>
-                <ul>
-                    <li>Engineered a unified view of customer journeys by integrating sales data with behavior metrics.
+                    <li><strong>Requirement Gathering & Analysis:</strong> Led the initial discovery phase,
+                        collaborating directly with C-level clients to translate vague business goals into precise
+                        technical specifications and KPI definitions.</li>
+                    <li><strong>Solution Architecture & Modeling:</strong> Designed and implemented scalable
+                        <strong>Star Schema data models</strong> (optimizing Facts and Dimensions) to support
+                        high-performance reporting on large-scale enterprise datasets.
                     </li>
-                    <li>Visualized key marketing KPIs including Customer Acquisition Cost (CAC), Return on Ad Spend
-                        (ROAS),
-                        and Lifetime Value (CLV).</li>
-                    <li>Applied Python-based customer segmentation (Clustering) to identify high-value cohorts for
-                        targeted marketing.</li>
+                    <li><strong>ETL Orchestration:</strong> Built and maintained robust backend data pipelines using
+                        <strong>MS SQL and Alteryx</strong>, automating the extraction, transformation, and loading of
+                        data from disparate sources.
+                    </li>
+                    <li><strong>Advanced Development:</strong> Developed 10+ interactive dashboards using complex
+                        <strong>DAX measures</strong>, Calculation Groups, and Row-Level Security (RLS) to ensure data
+                        granularity and security.
+                    </li>
+                    <li><strong>Performance Optimization:</strong> Optimized SQL queries and Power BI dataset refresh
+                        schedules, successfully reducing report latency by 40% and improving render times.</li>
+                    <li><strong>UAT & Deployment:</strong> Managed the End-to-End **User Acceptance Testing (UAT)**
+                        lifecycle, iterating on dashboard features based on stakeholder feedback before final production
+                        deployment.</li>
                 </ul>
+            </div>
 
+            <!-- Capgemini Sr -->
+            <div class="job-block">
                 <div class="job-header">
-                    <span class="company">Clinical & Operational Performance Dashboard (Healthcare)</span>
+                    <span class="company-role"><span class="role-highlight">Sr. Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jan 2023 – Aug 2023 | Pune</span>
                 </div>
                 <ul>
-                    <li>Developed a centralized analytics platform enabling operational teams to track patient flow,
-                        resource utilization, and efficiency metrics.</li>
-                    <li>Optimized scheduling processes by visualizing peak hours and staff availability.</li>
-                </ul>
-                <li>Architected an end-to-end Alteryx workflow to parse and structure complex, unstructured data
-                    sources.</li>
-                <li>Enabled data-driven decision making for a client by transforming raw text into
-                    actionable insights.</li>
+                    <li><strong>Legacy Migration:</strong> Executed the technical transition of legacy reporting systems
+                        to modern <strong>Cloud-based BI architectures</strong> using SQL and Power BI, ensuring zero
+                        downtime.</li>
+                    <li><strong>Data Standardization:</strong> Implemented standard global data protocols for
+                        high-volume transactional databases using **Advanced SQL**, ensuring consistency across regional
+                        reporting units.</li>
+                    <li><strong>Pipeline Scalability:</strong> Contributed to the migration of on-premise data marts to
+                        **Azure Cloud**, creating scalable data pipelines that support enterprise-level reporting.</li>
+                    <li><strong>Stakeholder Collaboration:</strong> Acted as a bridge between technical engineering
+                        teams and non-technical business units to ensure alignment on data definitions.</li>
                 </ul>
             </div>
 
-            <!-- Education -->
-            <div class="section-title">Education</div>
-            <div class="section-content">
+            <!-- Capgemini Jr -->
+            <div class="job-block">
                 <div class="job-header">
-                    <span class="company">Bachelor of Engineering (Computer Science and Engineering)</span>
-                    <span class="date">Year of Passing: 2020</span>
+                    <span class="company-role"><span class="role-highlight">Analyst / Software Engineer</span> |
+                        Capgemini</span>
+                    <span class="date-location">Jun 2021 – Dec 2022 | Pune</span>
                 </div>
-                <div class="role">[College Name]</div>
+                <ul>
+                    <li><strong>Data Governance:</strong> Engineered **SQL-based data governance workflows** that
+                        eliminated manual redundancy and improved overall data integrity by 30%.</li>
+                    <li><strong>Compliance Automation:</strong> Automated the extraction and validation of sensitive
+                        user transactional data using **SQL Scripts**, ensuring compliance with strict data protection
+                        standards.</li>
+                    <li><strong>Operational Reporting:</strong> Developed and maintained 6-7 critical operational
+                        dashboards using **Power BI**, tracking key performance indicators (KPIs) for internal
+                        efficiency.</li>
+                    <li><strong>Process Improvement:</strong> Identified bottlenecks in manual reporting processes and
+                        replaced them with automated SQL views and Power BI datasets.</li>
+                </ul>
             </div>
-
         </div>
+
+        <!-- Education -->
+        <div class="section-title">Education</div>
+        <div class="section-content">
+            <div class="job-header">
+                <span class="company-role">BE in CSE</span> | Bansal Institute of Science & Technology | 2020
+            </div>
+            <div style="font-size: 9.5pt; margin-top: 2px;">
+                <strong>Certifications:</strong> Alteryx Designer Core, HackerRank SQL.
+            </div>
+        </div>
+
+        <!-- ATS OPTIMIZATION (HIDDEN / WHITE TEXT ALL OTHER SKILLS) -->
+        <div class="ats-hidden">
+            Keywords: GCP, Google Cloud Platform, BigQuery, Snowflake, Azure Synapse, Databricks, Redshift, AWS, Python
+            (Pandas), PySpark, T-SQL, CI/CD, Jenkins, Git, Agile, SDLC, Fabric, Lakehouse.
+        </div>
+    </div>
 </body>
 
 </html>

@@ -12,6 +12,7 @@ import JarvisMesh from './components/JarvisMesh';
 import ErrorBoundary from './components/ErrorBoundary';
 import Preloader from './components/Preloader';
 import SystemArchitecture from './components/SystemArchitecture';
+import DataEcosystem from './components/DataEcosystem';
 
 
 // Animation variants for scroll reveal
@@ -68,6 +69,10 @@ function App() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={sectionVariants}>
             <SystemArchitecture />
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={sectionVariants}>
+            <DataEcosystem />
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={sectionVariants}>
